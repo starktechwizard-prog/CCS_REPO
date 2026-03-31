@@ -326,6 +326,9 @@ async def verify_session(session_token: str):
             del active_sessions[session_token]
     
     return {"valid": False}
+@app.get("/")
+def home():
+    return {"message": "Server is running 🚀"}
 
 @app.get("/api/admin/search-history")
 async def get_search_history(session_token: str, limit: int = 20):
