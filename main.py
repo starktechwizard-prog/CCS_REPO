@@ -329,6 +329,12 @@ async def verify_session(session_token: str):
 @app.get("/")
 def home():
     return {"message": "Server is running 🚀"}
+@app.get("/admin")
+def admin():
+    return FileResponse("admin-login.html")
+@app.get("/case")
+def case():
+    return FileResponse("case-details.html")
 
 @app.get("/api/admin/search-history")
 async def get_search_history(session_token: str, limit: int = 20):
