@@ -3,21 +3,22 @@ import time
 import json
 import pandas as pd
 import logging
-from datetime import datetime
-from fastapi import FastAPI, HTTPException, Request
+from datetime import datetime, timedelta
+from fastapi import FastAPI, HTTPException, Request, Depends
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, FileResponse
+from fastapi.staticfiles import StaticFiles
 from supabase import create_client, Client
 import requests
 from dotenv import load_dotenv
 import hashlib
 import secrets
 
+# Load environment variables
 load_dotenv()
 
 # ===== LOGGING CONFIGURATION =====
 os.makedirs('logs', exist_ok=True)
-
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -28,25 +29,43 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-app = FastAPI()
+app = FastAPI(title="JuriSight API", version="1.0.0")
+
+# CORS - Configure for production
+allowed_origins = os.getenv("ALLOWED_ORIGINS", "*").split(",")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=allowed_origins if allowed_origins != ["*"] else ["*"],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Initialize Supabase
-SUPABASE_URL = "https://eevolwvokcfuepbiqyiy.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVldm9sd3Zva2NmdWVwYmlxeWl5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ1MDU3MDYsImV4cCI6MjA5MDA4MTcwNn0.PBrqlRXrT6ubV2HbO0KFBKUeSBRG8JII2MB_HzVlp-o"
-supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+# ===== SUPABASE CONFIGURATION =====
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 
-# ===== ADMIN CREDENTIALS (Store in .env in production) =====
-ADMIN_USERNAME = "admin"
-ADMIN_PASSWORD_HASH = hashlib.sha256("admin123".encode()).hexdigest()  # Change in production!
+if not SUPABASE_URL or not SUPABASE_KEY:
+    logger.warning("⚠️ Supabase credentials not found in environment variables")
+    supabase: Client = None
+else:
+    supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+    logger.info("✅ Supabase client initialized")
 
-# In-memory session store (use Redis/Database in production)
+# ===== ADMIN CREDENTIALS FROM ENV =====
+ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "admin")
+ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "admin123")
+ADMIN_PASSWORD_HASH = hashlib.sha256(ADMIN_PASSWORD.encode()).hexdigest()
+
+# ===== ECOURTS API KEY =====
+ECOURTS_API_KEY = os.getenv("ECOURTS_API_KEY")
+if not ECOURTS_API_KEY:
+    logger.error("❌ ECOURTS_API_KEY not set in environment variables!")
+
+# ===== SESSION MANAGEMENT =====
+# Note: For production with multiple replicas, use Redis or database-backed sessions
 active_sessions = {}
+SESSION_DURATION_HOURS = int(os.getenv("SESSION_DURATION_HOURS", "24"))
 
 def calculate_analytics(details):
     """Calculate PDI, risk band, and analytics from hearing dates"""
@@ -144,7 +163,6 @@ def get_case_age_bucket(filing_date):
     """Calculate case age bucket"""
     if not filing_date:
         return "Unknown"
-    
     try:
         filing = pd.to_datetime(filing_date)
         today = pd.Timestamp.now()
@@ -161,6 +179,38 @@ def get_case_age_bucket(filing_date):
             return "5+ years"
     except:
         return "Unknown"
+
+def categorize_delay_reason(purpose):
+    """Categorize raw purpose strings into meaningful delay reasons"""
+    if not purpose:
+        return "Unknown Purpose"
+    
+    purpose_lower = str(purpose).lower()
+    
+    if any(term in purpose_lower for term in ['unready', 'not ready', 'absent', 'missing', 'unavailable', 'counsel', 'advocate', 'lawyer']):
+        return 'Party/Advocate Unavailable'
+    if any(term in purpose_lower for term in ['notice', 'summons', 'service', 'process']):
+        return 'Notice/Summons Pending'
+    if any(term in purpose_lower for term in ['stay', 'injunction', 'restraint', 'higher court']):
+        return 'Stayed by Higher Court'
+    if any(term in purpose_lower for term in ['evidence', 'exhibit', 'exh', 'document', 'affidavit', 'verification']):
+        return 'Evidence/Document Pending'
+    if any(term in purpose_lower for term in ['amount', 'deposit', 'payment', 'fee', 'cost', 'fine']):
+        return 'Payment/Deposit Pending'
+    if any(term in purpose_lower for term in ['order', 'judgment', 'decision', 'ruling', 'pronouncement']):
+        return 'Order/Judgment Pending'
+    if any(term in purpose_lower for term in ['filing', 'say', 'reply', 'response', 'written', 'statement']):
+        return 'Filing Pending'
+    if any(term in purpose_lower for term in ['appearance', 'present', 'presented', 'appear']):
+        return 'Appearance Required'
+    if any(term in purpose_lower for term in ['adjourn', 'adjourned', 'postpone', 'deferred']):
+        return 'Adjournment Requested'
+    if any(term in purpose_lower for term in ['steps', 'progress', 'proceeding', 'next step']):
+        return 'Case Progression Steps'
+    if any(term in purpose_lower for term in ['hearing', 'arguments', 'final hearing']):
+        return 'Hearing in Progress'
+    
+    return purpose if len(purpose) <= 50 else purpose[:50] + '...'
 
 def get_top_delay_reason(hearings):
     """Extract top delay reason from hearing history"""
@@ -197,47 +247,12 @@ def get_top_delay_reason(hearings):
     
     return f"{top_reason} ({percentage}%)"
 
-def categorize_delay_reason(purpose):
-    """Categorize raw purpose strings into meaningful delay reasons"""
-    purpose_lower = purpose.lower()
-    
-    if any(term in purpose_lower for term in ['unready', 'not ready', 'absent', 'missing', 'unavailable', 'counsel', 'advocate', 'lawyer']):
-        return 'Party/Advocate Unavailable'
-    
-    if any(term in purpose_lower for term in ['notice', 'summons', 'service', 'process']):
-        return 'Notice/Summons Pending'
-    
-    if any(term in purpose_lower for term in ['stay', 'injunction', 'restraint', 'higher court']):
-        return 'Stayed by Higher Court'
-    
-    if any(term in purpose_lower for term in ['evidence', 'exhibit', 'exh', 'document', 'affidavit', 'verification']):
-        return 'Evidence/Document Pending'
-    
-    if any(term in purpose_lower for term in ['amount', 'deposit', 'payment', 'fee', 'cost', 'fine']):
-        return 'Payment/Deposit Pending'
-    
-    if any(term in purpose_lower for term in ['order', 'judgment', 'decision', 'ruling', 'pronouncement']):
-        return 'Order/Judgment Pending'
-    
-    if any(term in purpose_lower for term in ['filing', 'say', 'reply', 'response', 'written', 'statement']):
-        return 'Filing Pending'
-    
-    if any(term in purpose_lower for term in ['appearance', 'present', 'presented', 'appear']):
-        return 'Appearance Required'
-    
-    if any(term in purpose_lower for term in ['adjourn', 'adjourned', 'postpone', 'deferred']):
-        return 'Adjournment Requested'
-    
-    if any(term in purpose_lower for term in ['steps', 'progress', 'proceeding', 'next step']):
-        return 'Case Progression Steps'
-    
-    if any(term in purpose_lower for term in ['hearing', 'arguments', 'final hearing']):
-        return 'Hearing in Progress'
-    
-    return purpose if len(purpose) <= 50 else purpose[:50] + '...'
-
 def save_search_history(cnr, case_data, admin_id):
     """Save search to admin history in Supabase"""
+    if not supabase:
+        logger.warning("⚠️ Supabase not configured, skipping search history save")
+        return
+    
     try:
         search_record = {
             "cnr_number": cnr,
@@ -249,18 +264,30 @@ def save_search_history(cnr, case_data, admin_id):
             "searched_by": admin_id,
             "searched_at": datetime.now().isoformat()
         }
-        
         supabase.table("admin_search_history").insert(search_record).execute()
         logger.info(f"💾 Search history saved for CNR: {cnr}")
     except Exception as e:
         logger.error(f"❌ Failed to save search history: {e}")
 
+async def verify_session(session_token: str):
+    """Verify admin session token"""
+    if not session_token or session_token not in active_sessions:
+        return None
+    
+    session = active_sessions[session_token]
+    if datetime.now() < session["expires_at"]:
+        return session["username"]
+    else:
+        del active_sessions[session_token]
+        return None
+
+# ===== AUTH ENDPOINTS =====
 @app.post("/api/auth/login")
 async def admin_login(request: Request):
     """Admin login endpoint"""
     try:
         data = await request.json()
-        username = data.get("username", "")
+        username = data.get("username", "").strip()
         password = data.get("password", "")
         
         if not username or not password:
@@ -277,7 +304,7 @@ async def admin_login(request: Request):
         active_sessions[session_token] = {
             "username": username,
             "created_at": datetime.now(),
-            "expires_at": datetime.now().replace(hour=23, minute=59, second=59)
+            "expires_at": datetime.now() + timedelta(hours=SESSION_DURATION_HOURS)
         }
         
         logger.info(f"✅ Admin login successful: {username}")
@@ -313,38 +340,27 @@ async def admin_logout(request: Request):
         raise HTTPException(status_code=500, detail="Logout failed")
 
 @app.get("/api/auth/verify")
-async def verify_session(session_token: str):
+async def verify_session_endpoint(session_token: str):
     """Verify admin session"""
-    if session_token in active_sessions:
-        session = active_sessions[session_token]
-        if datetime.now() < session["expires_at"]:
-            return {
-                "valid": True,
-                "username": session["username"]
-            }
-        else:
-            del active_sessions[session_token]
-    
+    username = await verify_session(session_token)
+    if username:
+        return {"valid": True, "username": username}
     return {"valid": False}
-@app.get("/")
-def home():
-    return {"message": "Server is running 🚀"}
-@app.get("/admin")
-def admin():
-    return FileResponse("admin-login.html")
-@app.get("/case")
-def case():
-    return FileResponse("case-details.html")
 
 @app.get("/api/admin/search-history")
 async def get_search_history(session_token: str, limit: int = 20):
     """Get admin's search history"""
     try:
-        if session_token not in active_sessions:
-            raise HTTPException(status_code=401, detail="Invalid session")
+        username = await verify_session(session_token)
+        if not username:
+            raise HTTPException(status_code=401, detail="Invalid or expired session")
+        
+        if not supabase:
+            raise HTTPException(status_code=503, detail="Database not configured")
         
         response = supabase.table("admin_search_history")\
             .select("*")\
+            .eq("searched_by", username)\
             .order("searched_at", desc=True)\
             .limit(limit)\
             .execute()
@@ -360,17 +376,21 @@ async def get_search_history(session_token: str, limit: int = 20):
         logger.error(f"Search history error: {e}")
         raise HTTPException(status_code=500, detail="Failed to fetch search history")
 
+# ===== CASE ENDPOINTS =====
 @app.get("/api/case/{cnr}")
 async def get_case_data(cnr: str, session_token: str = ""):
     """Fetch case data from eCourts API"""
-    
     logger.info(f"\n{'='*60}")
     logger.info(f"🚨 API REQUEST FOR CNR: {cnr}")
     logger.info(f"{'='*60}")
     
+    if not ECOURTS_API_KEY:
+        logger.error("❌ eCourts API key not configured")
+        raise HTTPException(status_code=500, detail="Server configuration error")
+    
     api_url = f"https://webapi.ecourtsindia.com/api/partner/case/{cnr}"
     headers = {
-        "Authorization": "Bearer eci_live_uykayp4uhxaatljmj0tuzfp9cdl27nyj",
+        "Authorization": f"Bearer {ECOURTS_API_KEY}",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
         "Accept": "application/json",
         "Connection": "keep-alive"
@@ -384,10 +404,17 @@ async def get_case_data(cnr: str, session_token: str = ""):
             raw_data = response.json()
             logger.info(f"✅ API Fetch Successful (Attempt {attempt + 1})")
             break
+        except requests.exceptions.HTTPError as e:
+            if response.status_code == 404:
+                logger.error(f"❌ CNR not found: {cnr}")
+                raise HTTPException(status_code=404, detail="CNR not found in eCourts database.")
+            logger.error(f"❌ HTTP Error Attempt {attempt + 1}: {e}")
+        except requests.exceptions.Timeout:
+            logger.error(f"❌ Timeout Attempt {attempt + 1}")
         except Exception as e:
             logger.error(f"❌ API Fetch Attempt {attempt + 1} failed: {e}")
-            time.sleep(2)
-            continue
+        time.sleep(2)
+        continue
     
     if not raw_data:
         logger.error("❌ Failed to connect to eCourts API after 2 attempts")
@@ -396,11 +423,11 @@ async def get_case_data(cnr: str, session_token: str = ""):
     details = raw_data.get("data", {}).get("courtCaseData", {})
     
     if not details:
-        logger.error(f"❌ CNR not found: {cnr}")
+        logger.error(f"❌ No case data found for CNR: {cnr}")
         raise HTTPException(status_code=404, detail="CNR not found in eCourts database.")
     
     logger.info(f"\n📋 RAW API PAYLOAD FOR {cnr}")
-    logger.info(json.dumps(details, indent=2, ensure_ascii=False))
+    logger.info(json.dumps({k: v for k, v in list(details.items())[:10]}, indent=2, ensure_ascii=False))
     
     stats = calculate_analytics(details)
     case_age_bucket = get_case_age_bucket(details.get("filingDate"))
@@ -423,12 +450,14 @@ async def get_case_data(cnr: str, session_token: str = ""):
         "pdi_percent": stats["pdi_percent"]
     }
     
-    try:
-        supabase.table("case_records").delete().eq("cnr_number", cnr).execute()
-        supabase.table("case_records").insert(cleaned_data).execute()
-        logger.info(f"💾 Successfully saved to Supabase: {cnr}")
-    except Exception as e:
-        logger.error(f"❌ Storage Error: {e}")
+    # Save to Supabase if configured
+    if supabase:
+        try:
+            supabase.table("case_records").delete().eq("cnr_number", cnr).execute()
+            supabase.table("case_records").insert(cleaned_data).execute()
+            logger.info(f"💾 Successfully saved to Supabase: {cnr}")
+        except Exception as e:
+            logger.error(f"❌ Storage Error: {e}")
     
     # Save to admin search history if logged in
     if session_token and session_token in active_sessions:
@@ -438,10 +467,9 @@ async def get_case_data(cnr: str, session_token: str = ""):
     response_data = {
         "source": "eCourtsIndia Live",
         "data": cleaned_data,
-        "raw_data": details,
         "case_age_bucket": case_age_bucket,
         "top_delay_reason": top_delay_reason,
-        **details
+        **{k: v for k, v in details.items() if k not in ["rawData", "metadata"]}  # Limit payload size
     }
     
     logger.info(f"✅ Response sent successfully for CNR: {cnr}")
@@ -449,13 +477,39 @@ async def get_case_data(cnr: str, session_token: str = ""):
     
     return response_data
 
+# ===== HEALTH & UTILITY ENDPOINTS =====
 @app.get("/api/health")
 async def health_check():
     """Health check endpoint"""
-    logger.info("Health check requested")
-    return {"status": "ok", "message": "Backend is running"}
+    return {
+        "status": "ok",
+        "message": "JuriSight Backend is running",
+        "supabase_connected": supabase is not None,
+        "timestamp": datetime.now().isoformat()
+    }
 
+@app.get("/")
+async def serve_index():
+    """Serve the main index.html file"""
+    return FileResponse("index.html")
+
+@app.get("/admin-login")
+async def serve_admin_login():
+    """Serve the admin login page"""
+    return FileResponse("admin-login.html")
+
+@app.get("/case-details")
+async def serve_case_details():
+    """Serve the case details page"""
+    return FileResponse("case-details.html")
+
+# Mount static files directory for CSS/JS/images if you add them later
+# app.mount("/static", StaticFiles(directory="static"), name="static")
+
+# ===== MAIN ENTRY POINT =====
 if __name__ == "__main__":
     import uvicorn
-    logger.info("🚀 Starting JuriSight Backend Server...")
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.getenv("PORT", 8000))
+    logger.info(f"🚀 Starting JuriSight Backend Server on port {port}...")
+    uvicorn.run(app, host="0.0.0.0", port=port)
+    
