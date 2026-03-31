@@ -31,7 +31,7 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI(title="JuriSight API", version="1.0.0")
 
-# CORS - Configure for production
+# ===== CORS CONFIGURATION =====
 allowed_origins = os.getenv("ALLOWED_ORIGINS", "*").split(",")
 app.add_middleware(
     CORSMiddleware,
@@ -469,7 +469,7 @@ async def get_case_data(cnr: str, session_token: str = ""):
         "data": cleaned_data,
         "case_age_bucket": case_age_bucket,
         "top_delay_reason": top_delay_reason,
-        **{k: v for k, v in details.items() if k not in ["rawData", "metadata"]}  # Limit payload size
+        **{k: v for k, v in details.items() if k not in ["rawData", "metadata"]}
     }
     
     logger.info(f"✅ Response sent successfully for CNR: {cnr}")
@@ -488,6 +488,7 @@ async def health_check():
         "timestamp": datetime.now().isoformat()
     }
 
+# ===== STATIC FILE SERVING FOR FRONTEND =====
 @app.get("/")
 async def serve_index():
     """Serve the main index.html file"""
@@ -512,4 +513,3 @@ if __name__ == "__main__":
     port = int(os.getenv("PORT", 8000))
     logger.info(f"🚀 Starting JuriSight Backend Server on port {port}...")
     uvicorn.run(app, host="0.0.0.0", port=port)
-    
