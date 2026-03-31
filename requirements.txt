@@ -2,6 +2,7 @@ flask
 numpy
 pandas
 fastapi
+uvicorn
 supabase
 requests
 python-dotenv
