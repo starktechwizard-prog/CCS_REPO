@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Details - JuriSight</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #2563eb; --primary-dark: #1d4ed8; --primary-light: #3b82f6;
+            --secondary: #64748b; --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+            --dark: #0f172a; --dark-light: #1e293b;
+            --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1; --gray-400: #94a3b8; --gray-500: #64748b;
+            --gray-600: #475569; --gray-700: #334155; --gray-800: #1e293b;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+            color: var(--gray-800); line-height: 1.6; min-height: 100vh;
+        }
+        .navbar {
+            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
+            box-shadow: var(--shadow); padding: 0; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+        }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 16px 32px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-brand {
+            font-size: 24px; font-weight: 700; background: var(--gradient-primary);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            display: flex; align-items: center; gap: 10px; text-decoration: none;
+        }
+        .nav-brand i { font-size: 28px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+        .nav-link {
+            text-decoration: none; color: var(--gray-600); font-weight: 500; font-size: 14px;
+            transition: all 0.3s ease; padding: 8px 16px; border-radius: 8px;
+        }
+        .nav-link:hover { color: var(--primary); background: rgba(37, 99, 235, 0.05); }
+        .btn-login {
+            background: var(--gradient-primary); color: white !important;
+            padding: 10px 24px !important; border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+        .btn-login:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4); }
+        .main-container { margin-top: 80px; padding: 40px 32px; max-width: 1200px; margin: 0 auto; }
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 8px; color: var(--primary);
+            text-decoration: none; font-weight: 500; font-size: 14px; margin-bottom: 24px;
+            transition: all 0.3s ease; padding: 8px 16px; border-radius: 8px;
+        }
+        .back-btn:hover { background: rgba(37, 99, 235, 0.1); transform: translateX(-4px); }
+        .page-header { margin-bottom: 32px; animation: fadeInUp 0.6s ease; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .page-title { font-size: 28px; font-weight: 700; color: var(--gray-800); margin-bottom: 8px; }
+        .page-subtitle { color: var(--gray-500); font-size: 15px; }
+        .case-header-card {
+            background: white; border-radius: 20px; padding: 32px;
+            box-shadow: var(--shadow-lg); margin-bottom: 24px; animation: fadeInUp 0.6s ease 0.1s both;
+        }
+        .case-header-top {
+            display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;
+        }
+        .case-number { font-size: 24px; font-weight: 700; color: var(--gray-800); letter-spacing: -0.5px; }
+        .case-number span { color: var(--primary); }
+        .status-badge {
+            padding: 8px 20px; border-radius: 20px; font-size: 13px;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .status-pending {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.1) 100%);
+            color: #d97706; border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+        .status-disposed {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+            color: #059669; border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+        .status-closed {
+            background: linear-gradient(135deg, rgba(100, 116, 139, 0.1) 0%, rgba(71, 85, 105, 0.1) 100%);
+            color: var(--gray-600); border: 1px solid var(--gray-300);
+        }
+        .court-name { font-size: 18px; font-weight: 600; color: var(--gray-700); margin-bottom: 4px; }
+        .court-location { font-size: 14px; color: var(--gray-500); }
+        .case-type {
+            display: inline-block; padding: 6px 14px; background: var(--gray-100);
+            border-radius: 8px; font-size: 13px; font-weight: 500; color: var(--gray-700); margin-top: 12px;
+        }
+        
+        /* ===== ANALYTICS BADGES (NEW - ATTRACTIVE DISPLAY) ===== */
+        .analytics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+            animation: fadeInUp 0.6s ease 0.15s both;
+        }
+        
+        .analytics-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .analytics-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .analytics-card.risk { border-color: var(--danger); }
+        .analytics-card.age { border-color: var(--primary); }
+        .analytics-card.delay { border-color: var(--warning); }
+        
+        .analytics-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 12px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        
+        .analytics-card.risk .analytics-icon {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
+            color: var(--danger);
+        }
+        
+        .analytics-card.age .analytics-icon {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            color: var(--primary);
+        }
+        
+        .analytics-card.delay .analytics-icon {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.1) 100%);
+            color: var(--warning);
+        }
+        
+        .analytics-label {
+            font-size: 13px;
+            color: var(--gray-500);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        
+        .analytics-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--gray-800);
+        }
+        
+        .analytics-card.risk .analytics-value { color: var(--danger); }
+        .analytics-card.age .analytics-value { color: var(--primary); }
+        .analytics-card.delay .analytics-value { color: var(--warning); }
+        
+        /* ===== UPDATED RISK BADGE WITH PERCENTAGE ===== */
+        .risk-badge {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+            min-width: 120px;
+        }
+        
+        .risk-badge .risk-level {
+            font-size: 15px;
+            font-weight: 700;
+        }
+        
+        .risk-badge .risk-percent {
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: normal;
+            margin-top: 3px;
+            opacity: 0.85;
+        }
+        
+        .risk-high {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.15) 100%);
+            color: #dc2626;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        
+        .risk-medium {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(217, 119, 6, 0.15) 100%);
+            color: #d97706;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+        
+        .risk-low {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.15) 100%);
+            color: #059669;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        /* ===== END ANALYTICS BADGES ===== */
+        
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 32px; }
+        .info-card {
+            background: white; border-radius: 16px; padding: 24px;
+            box-shadow: var(--shadow-md); animation: fadeInUp 0.6s ease 0.2s both;
+        }
+        .info-card-title { font-size: 16px; font-weight: 600; color: var(--gray-800); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+        .info-card-title i { color: var(--primary); }
+        .info-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--gray-100); font-size: 14px; }
+        .info-row:last-child { border-bottom: none; }
+        .info-label { color: var(--gray-500); font-weight: 500; }
+        .info-value { font-weight: 600; color: var(--gray-800); text-align: right; }
+        .info-value.highlight { color: var(--primary); }
+        .parties-section { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; }
+        .party-card {
+            background: white; border-radius: 16px; padding: 24px;
+            box-shadow: var(--shadow-md); animation: fadeInUp 0.6s ease 0.3s both;
+        }
+        .party-card.petitioner { border-left: 4px solid var(--success); }
+        .party-card.respondent { border-left: 4px solid var(--danger); }
+        .party-title { font-size: 16px; font-weight: 600; color: var(--gray-800); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+        .party-title.petitioner { color: var(--success); }
+        .party-title.respondent { color: var(--danger); }
+        .party-list { list-style: none; }
+        .party-list li { padding: 10px 0; font-size: 15px; color: var(--gray-700); border-bottom: 1px solid var(--gray-100); }
+        .party-list li:last-child { border-bottom: none; }
+        .party-list li strong { color: var(--gray-800); }
+        .next-hearing-card {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+            border: 2px solid rgba(37, 99, 235, 0.1); border-radius: 16px;
+            padding: 24px; margin-bottom: 32px; animation: fadeInUp 0.6s ease 0.4s both;
+        }
+        .next-hearing-title { font-size: 16px; font-weight: 600; color: var(--gray-800); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+        .next-hearing-title i { color: var(--primary); font-size: 20px; }
+        .next-hearing-date { font-size: 24px; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+        .next-hearing-purpose { font-size: 15px; color: var(--gray-600); line-height: 1.6; }
+        .timeline-section { animation: fadeInUp 0.6s ease 0.5s both; }
+        .timeline-card { background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); }
+        .timeline-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+        .timeline-title { font-size: 16px; font-weight: 600; color: var(--gray-800); }
+        .timeline-toggle { font-size: 13px; color: var(--primary); cursor: pointer; font-weight: 500; }
+        .timeline-box {
+            height: 600px; overflow-y: auto; overflow-x: hidden;
+            border: 2px solid var(--gray-200); border-radius: 12px;
+            padding: 20px; background: var(--gray-50);
+        }
+        .timeline-box::-webkit-scrollbar { width: 8px; }
+        .timeline-box::-webkit-scrollbar-track { background: var(--gray-200); border-radius: 10px; }
+        .timeline-box::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        .timeline-box::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
+        .timeline { position: relative; padding-left: 32px; }
+        .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: var(--gray-200); }
+        .timeline-item { position: relative; margin-bottom: 24px; padding-left: 24px; }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-dot {
+            position: absolute; left: -28px; top: 4px; width: 18px; height: 18px;
+            border-radius: 50%; background: white; border: 3px solid var(--primary); box-shadow: var(--shadow-sm);
+        }
+        .timeline-dot.special {
+            background: var(--success); border-color: var(--success);
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+        }
+        .timeline-dot.upcoming {
+            background: var(--warning); border-color: var(--warning);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
+            50% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); }
+        }
+        .timeline-date { font-size: 13px; color: var(--gray-500); margin-bottom: 4px; font-weight: 500; }
+        .timeline-purpose { font-size: 14px; font-weight: 600; color: var(--gray-800); margin-bottom: 4px; }
+        .timeline-business { font-size: 13px; color: var(--gray-600); }
+        .loading-container { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 400px; color: var(--gray-500); }
+        .loading-spinner {
+            width: 40px; height: 40px; border: 3px solid var(--gray-200);
+            border-top-color: var(--primary); border-radius: 50%;
+            animation: spin 1s linear infinite; margin-bottom: 16px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .error-container { text-align: center; padding: 60px 20px; animation: fadeInUp 0.6s ease; }
+        .error-icon { font-size: 64px; color: var(--danger); margin-bottom: 24px; }
+        .error-title { font-size: 24px; font-weight: 600; color: var(--gray-800); margin-bottom: 8px; }
+        .error-message { color: var(--gray-500); margin-bottom: 24px; }
+        .manual-input {
+            background: white; border-radius: 16px; padding: 32px;
+            box-shadow: var(--shadow-lg); max-width: 600px; margin: 40px auto; text-align: center;
+        }
+        .manual-input h3 { font-size: 18px; margin-bottom: 16px; color: var(--gray-800); }
+        .manual-input p { color: var(--gray-600); margin-bottom: 20px; font-size: 14px; }
+        .input-group { display: flex; gap: 12px; margin-top: 16px; }
+        .input-group input {
+            flex: 1; padding: 12px 16px; border: 2px solid var(--gray-200);
+            border-radius: 8px; font-size: 14px; outline: none; transition: all 0.3s ease;
+        }
+        .input-group input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
+        .btn-primary {
+            padding: 12px 24px; background: var(--gradient-primary); color: white;
+            border: none; border-radius: 8px; font-weight: 600; cursor: pointer;
+            transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px;
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4); }
+        .footer {
+            background: white; margin-top: 80px; padding: 32px;
+            text-align: center; box-shadow: var(--shadow);
+            border-top: 3px solid var(--primary);
+        }
+        .footer-text { color: var(--gray-500); font-size: 14px; margin-bottom: 12px; }
+        .privacy-notice {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 8px 16px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 20px;
+            color: var(--success); font-size: 13px; font-weight: 500;
+        }
+        .privacy-notice i { font-size: 16px; }
+        @media (max-width: 768px) {
+            .case-header-top { flex-direction: column; align-items: flex-start; }
+            .parties-section { grid-template-columns: 1fr; }
+            .nav-container { padding: 16px 20px; }
+            .nav-links { gap: 16px; }
+            .main-container { padding: 24px 20px; }
+            .case-header-card, .info-card, .party-card, .timeline-card { padding: 20px; }
+            .input-group { flex-direction: column; }
+            .timeline-box { height: 400px; }
+            .analytics-grid { grid-template-columns: 1fr; }
+        }
+        .hidden { display: none !important; }
+        .text-center { text-align: center; }
+        .mt-4 { margin-top: 16px; }
+        .mb-4 { margin-bottom: 16px; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <i class="fas fa-scale-balanced"></i>
+                JuriSight
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link btn-login"><i class="fas fa-user-shield"></i> Admin Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Back Button -->
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to Search
+        </a>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="loading-container">
+            <div class="loading-spinner"></div>
+            <p>Loading case details...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="errorState" class="error-container hidden">
+            <i class="fas fa-exclamation-triangle error-icon"></i>
+            <h3 class="error-title">Case Not Found</h3>
+            <p class="error-message" id="errorMessage">Unable to retrieve case information. Please check the CNR number and try again.</p>
+            <div class="manual-input">
+                <h3><i class="fas fa-keyboard" style="margin-right: 8px;"></i>Enter CNR Number</h3>
+                <p>Or enter a CNR number manually to test:</p>
+                <div class="input-group">
+                    <input type="text" id="manualCNRInput" placeholder="e.g., MHAH180013742011">
+                    <button class="btn-primary" onclick="loadManualCase()">
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
+                </div>
+            </div>
+            <button onclick="window.location.href='index.html'" class="btn-primary mt-4" style="margin-top: 20px;">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </button>
+        </div>
+
+        <!-- Case Details Content -->
+        <div id="caseContent" class="hidden">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Case Details</h1>
+                <p class="page-subtitle">Public case information</p>
+            </div>
+
+            <!-- Case Header Card -->
+            <div class="case-header-card">
+                <div class="case-header-top">
+                    <div>
+                        <div class="case-number">CNR: <span id="caseCNR">-</span></div>
+                        <div class="court-name" id="courtName">-</div>
+                        <div class="court-location" id="district">-</div>
+                        <div class="case-type" id="caseType">-</div>
+                    </div>
+                    <div>
+                        <span class="status-badge status-pending" id="statusBadge">Pending</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== ANALYTICS CARDS (NEW - ATTRACTIVE DISPLAY) ===== -->
+            <div class="analytics-grid">
+                <!-- PDI Risk Band -->
+                <div class="analytics-card risk">
+                    <div class="analytics-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="analytics-label">PDI Risk Band</div>
+                    <div class="analytics-value">
+                        <span id="pdiRiskBand" class="risk-badge risk-low">
+                            <span class="risk-level">-</span>
+                            <span class="risk-percent">0% Risk Score</span>
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Case Age Bucket -->
+                <div class="analytics-card age">
+                    <div class="analytics-icon">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <div class="analytics-label">Case Age</div>
+                    <div class="analytics-value" id="caseAgeBucket">-</div>
+                </div>
+                
+                <!-- Top Delay Reason -->
+                <div class="analytics-card delay">
+                    <div class="analytics-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="analytics-label">Top Delay Reason</div>
+                    <div class="analytics-value" id="topDelayReason" style="font-size: 14px;">
+                        <span class="delay-reason">-</span>
+                        <span class="delay-percent" style="display: block; font-size: 11px; font-weight: 500; opacity: 0.8; margin-top: 3px;"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- ===== END ANALYTICS CARDS ===== -->
+
+            <!-- Info Grid -->
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3 class="info-card-title">
+                        <i class="fas fa-calendar"></i>
+                        Important Dates
+                    </h3>
+                    <div class="info-row">
+                        <span class="info-label">Filing Date</span>
+                        <span class="info-value" id="filingDate">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">First Hearing</span>
+                        <span class="info-value" id="firstHearing">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Last Hearing</span>
+                        <span class="info-value" id="lastHearing">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Next Hearing</span>
+                        <span class="info-value highlight" id="nextHearing">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Case Duration</span>
+                        <span class="info-value" id="caseDuration">-</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h3 class="info-card-title">
+                        <i class="fas fa-info-circle"></i>
+                        Case Information
+                    </h3>
+                    <div class="info-row">
+                        <span class="info-label">Case Number</span>
+                        <span class="info-value" id="caseNumber">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Filing Number</span>
+                        <span class="info-value" id="filingNumber">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Current Stage</span>
+                        <span class="info-value" id="caseStage">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Next Purpose</span>
+                        <span class="info-value" id="nextPurpose">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Total Hearings</span>
+                        <span class="info-value" id="hearingCount">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next Hearing Card -->
+            <div class="next-hearing-card">
+                <h3 class="next-hearing-title">
+                    <i class="fas fa-bell"></i>
+                    Upcoming Hearing
+                </h3>
+                <div class="next-hearing-date" id="nextHearingLarge">-</div>
+                <p class="next-hearing-purpose" id="nextHearingPurpose">-</p>
+            </div>
+
+            <!-- Parties Section -->
+            <div class="parties-section">
+                <div class="party-card petitioner">
+                    <h3 class="party-title petitioner">
+                        <i class="fas fa-user-plus"></i>
+                        Petitioner(s)
+                    </h3>
+                    <ul class="party-list" id="petitionersList"><li>Loading...</li></ul>
+                </div>
+                <div class="party-card respondent">
+                    <h3 class="party-title respondent">
+                        <i class="fas fa-user-minus"></i>
+                        Respondent(s)
+                    </h3>
+                    <ul class="party-list" id="respondentsList"><li>Loading...</li></ul>
+                </div>
+            </div>
+
+            <!-- Hearing Timeline -->
+            <div class="timeline-section">
+                <div class="timeline-card">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">
+                            <i class="fas fa-history" style="margin-right: 8px; color: var(--primary);"></i>
+                            Complete Hearing History
+                        </h3>
+                        <span class="timeline-toggle" onclick="toggleTimeline()">Show All <i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="timeline-box">
+                        <div class="timeline" id="timelineContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer with Privacy Notice -->
+    <footer class="footer">
+        <p class="footer-text">
+            © 2024 JuriSight - Simplifying Access to Justice | 
+            <a href="#" style="color: var(--primary); text-decoration: none;">Help</a> | 
+            <a href="#" style="color: var(--primary); text-decoration: none;">Contact</a>
+        </p>
+        <div class="privacy-notice">
+            <i class="fas fa-shield-halved"></i>
+            <span>DPDP Act 2023 Compliant | No Personal Litigant Data Stored | CNR-Based Tracking Only</span>
+        </div>
+    </footer>
+
+    <script>
+        // ===== UTILITY FUNCTIONS =====
+        function getUrlParameter(name) { return new URLSearchParams(window.location.search).get(name); }
+        function formatDate(dateString) {
+            if (!dateString) return 'N/A';
+            const options = { year: 'numeric', month: 'short', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString('en-US', options);
+        }
+        function formatDateLarge(dateString) {
+            if (!dateString) return 'N/A';
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString('en-US', options);
+        }
+        function formatDuration(days) {
+            if (!days) return 'N/A';
+            const years = Math.floor(days / 365), months = Math.floor((days % 365) / 30);
+            if (years > 0) return `${years}+ year${years > 1 ? 's' : ''}`;
+            if (months > 0) return `${months} month${months > 1 ? 's' : ''}`;
+            return `${days} day${days > 1 ? 's' : ''}`;
+        }
+        function getStatusClass(status) {
+            const s = (status || '').toLowerCase();
+            if (s === 'disposed' || s === 'closed') return 'status-disposed';
+            if (s === 'pending' || s === 'active') return 'status-pending';
+            return 'status-closed';
+        }
+        function formatStatus(status) {
+            if (!status) return 'Unknown';
+            return status.replace(/_/g, ' ').toUpperCase();
+        }
+        function formatPurpose(purpose) {
+            if (!purpose) return 'N/A';
+            const simplifications = {
+                'Notice_Unready': 'Notice pending', 'Order on Exh': 'Order on exhibit',
+                'Depositing Amount': 'Amount deposit pending', 'Stayed by District Court': 'Stayed by higher court',
+                'Stayed by Honble High Court': 'Stayed by High Court', 'Steps_Unready': 'Case progression steps pending',
+                'Filing of Say on Exh___Unready': 'Response filing pending', 'Verification': 'Document verification pending'
+            };
+            return simplifications[purpose] || purpose.replace(/_/g, ' ');
+        }
+        
+        // ===== UPDATED: Get Risk Class with Normalization =====
+        function getRiskClass(risk) {
+            if (!risk) return 'risk-low';
+            const r = risk.toString().toLowerCase().trim();
+            if (r === 'high') return 'risk-high';
+            if (r === 'medium') return 'risk-medium';
+            return 'risk-low'; // Default to low for any unknown value
+        }
+        
+        // ===== UPDATED: Normalize Risk Band Value =====
+        function normalizeRiskBand(risk) {
+            if (!risk) return 'Low';
+            const r = risk.toString().toLowerCase().trim();
+            if (r === 'high') return 'High';
+            if (r === 'medium') return 'Medium';
+            return 'Low'; // Default to low for any unknown value
+        }
+
+        // ===== TIMELINE =====
+        let showAllTimeline = false;
+        function toggleTimeline() {
+            showAllTimeline = !showAllTimeline;
+            const toggle = document.querySelector('.timeline-toggle');
+            toggle.innerHTML = showAllTimeline ? 'Show Less <i class="fas fa-chevron-up"></i>' : 'Show All <i class="fas fa-chevron-down"></i>';
+            renderTimeline(showAllTimeline ? window.allHearings : window.recentHearings);
+        }
+        function renderTimeline(hearings) {
+            const container = document.getElementById('timelineContainer');
+            container.innerHTML = '';
+            // Show hearings in reverse order (newest first)
+            const display = [...(hearings || [])].reverse();
+            display.forEach(hearing => {
+                const item = document.createElement('div');
+                item.className = 'timeline-item';
+                item.innerHTML = `
+                    <div class="timeline-dot ${hearing.isSpecial ? 'special' : ''}"></div>
+                    <div class="timeline-date">${formatDate(hearing.hearingDate)}</div>
+                    <div class="timeline-purpose">${formatPurpose(hearing.purposeOfListing)}</div>
+                    <div class="timeline-business">${hearing.businessOnDate ? 'Business: ' + formatDate(hearing.businessOnDate) : ''}</div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // ===== MANUAL SEARCH =====
+        function loadManualCase() {
+            const cnr = document.getElementById('manualCNRInput').value.trim();
+            if (!cnr) { alert('Please enter a CNR number'); return; }
+            window.location.href = `case-details.html?cnr=${encodeURIComponent(cnr)}`;
+        }
+
+        // ===== ERROR HANDLING =====
+        function showError(message) {
+            document.getElementById('loadingState').classList.add('hidden');
+            document.getElementById('errorState').classList.remove('hidden');
+            document.getElementById('errorMessage').textContent = message;
+        }
+
+        // ===== DISPLAY CASE DATA =====
+        function displayCaseData(response) {
+            console.log('Full response:', response);
+            const data = response.raw_data || response.data || response;
+            console.log('Using ', data);
+            
+            document.getElementById('loadingState').classList.add('hidden');
+            document.getElementById('caseContent').classList.remove('hidden');
+
+            // Header
+            document.getElementById('caseCNR').textContent = data.cnr || data.cnr_number || 'N/A';
+            document.getElementById('courtName').textContent = data.courtName || data.court_name || 'N/A';
+            const district = data.district || '', state = data.state || '';
+            document.getElementById('district').textContent = district && state ? `${district}, ${state}` : 'N/A';
+            document.getElementById('caseType').textContent = data.caseTypeRaw || data.caseType || data.case_type || 'N/A';
+            const status = data.caseStatus || data.case_status || 'UNKNOWN';
+            const statusBadge = document.getElementById('statusBadge');
+            statusBadge.textContent = formatStatus(status);
+            statusBadge.className = `status-badge ${getStatusClass(status)}`;
+
+            // Dates
+            document.getElementById('filingDate').textContent = formatDate(data.filingDate || data.filing_date);
+            document.getElementById('firstHearing').textContent = formatDate(data.firstHearingDate || data.first_hearing_date);
+            document.getElementById('lastHearing').textContent = formatDate(data.lastHearingDate || data.hearing_date || data.last_hearing_date);
+            document.getElementById('nextHearing').textContent = formatDate(data.nextHearingDate || data.next_hearing_date);
+            document.getElementById('nextHearingLarge').textContent = formatDateLarge(data.nextHearingDate || data.next_hearing_date);
+            document.getElementById('caseDuration').textContent = formatDuration(data.caseDurationDays || data.case_duration_days);
+            
+            // NEW: Case Age Bucket (from backend response)
+            document.getElementById('caseAgeBucket').textContent = response.case_age_bucket || 'Unknown';
+
+            // Info
+            document.getElementById('caseNumber').textContent = data.caseNumber || data.case_number || 'N/A';
+            document.getElementById('filingNumber').textContent = data.filingNumber || data.registrationNumber || data.filing_number || 'N/A';
+            document.getElementById('caseStage').textContent = data.stageOfCase || data.stage_of_case || 'N/A';
+            const purpose = data.purpose || data.purpose_of_hearing || '';
+            document.getElementById('nextPurpose').textContent = formatPurpose(purpose);
+            document.getElementById('nextHearingPurpose').textContent = `${formatPurpose(purpose)} - Next hearing scheduled for case progression`;
+            document.getElementById('hearingCount').textContent = data.hearingCount || data.total_hearings || 0;
+            
+            // ===== UPDATED: PDI Risk Band with Percentage & Normalization =====
+            const pdiRiskBand = document.getElementById('pdiRiskBand');
+            
+            // Get risk band from multiple possible locations in response
+            const riskBand = normalizeRiskBand(
+                response.risk_band || 
+                data.risk_band || 
+                (response.data && response.data.risk_band) || 
+                'Low'
+            );
+            
+            // Get PDI percentage from multiple possible locations
+            const pdiPercent = 
+                response.pdi_percent !== undefined ? response.pdi_percent :
+                data.pdi_percent !== undefined ? data.pdi_percent :
+                (response.data && response.data.pdi_percent) !== undefined ? response.data.pdi_percent :
+                0;
+            
+            // Update risk level and percentage separately
+            const riskLevelEl = pdiRiskBand.querySelector('.risk-level');
+            const riskPercentEl = pdiRiskBand.querySelector('.risk-percent');
+            
+            if (riskLevelEl) riskLevelEl.textContent = riskBand;
+            if (riskPercentEl) riskPercentEl.textContent = `${Number(pdiPercent).toFixed(1)}% Risk Score`;
+            
+            // Apply the correct CSS class
+            pdiRiskBand.className = `risk-badge ${getRiskClass(riskBand)}`;
+            
+            console.log('📊 PDI Display:', { riskBand, pdiPercent, class: getRiskClass(riskBand) });
+            
+            // ===== UPDATED: Top Delay Reason with Better Formatting =====
+            const topDelayElement = document.getElementById('topDelayReason');
+            const topDelayReason = response.top_delay_reason || data.top_delay_reason || 'No delay data available';
+            
+            // Parse the reason and percentage for better display
+            const delayMatch = topDelayReason.match(/(.+?)\s*\((\d+\.?\d*)%\)/);
+            const delayReasonEl = topDelayElement.querySelector('.delay-reason');
+            const delayPercentEl = topDelayElement.querySelector('.delay-percent');
+            
+            if (delayMatch && delayReasonEl && delayPercentEl) {
+                delayReasonEl.textContent = delayMatch[1].trim();
+                delayPercentEl.textContent = `${delayMatch[2]}% of hearings`;
+            } else {
+                if (delayReasonEl) delayReasonEl.textContent = topDelayReason;
+                if (delayPercentEl) delayPercentEl.textContent = '';
+            }
+
+            // Parties
+            const petitioners = data.petitioners || [];
+            document.getElementById('petitionersList').innerHTML = petitioners.length > 0 
+                ? petitioners.map(name => `<li><strong>${name}</strong></li>`).join('') : '<li>No petitioners listed</li>';
+            const respondents = data.respondents || [];
+            document.getElementById('respondentsList').innerHTML = respondents.length > 0
+                ? respondents.map(name => `<li><strong>${name}</strong></li>`).join('') : '<li>No respondents listed</li>';
+
+            // Timeline
+            const hearings = data.historyOfCaseHearings || data.history_of_case_hearings || [];
+            console.log('📅 Total hearings received:', hearings.length);
+            window.allHearings = hearings;
+            window.recentHearings = hearings.slice(0, 10);
+            renderTimeline(window.recentHearings);
+        }
+
+        // ===== LOAD CASE =====
+        async function loadCaseDetails() {
+            const cnr = getUrlParameter('cnr');
+            if (!cnr) { showError('No case number provided in URL'); return; }
+            try {
+                const response = await fetch(`http://localhost:8000/api/case/${encodeURIComponent(cnr)}`, {
+                    method: 'GET', headers: { 'Content-Type': 'application/json' }
+                });
+                if (!response.ok) {
+                    const err = await response.json().catch(() => ({}));
+                    throw new Error(err.detail || `HTTP ${response.status}`);
+                }
+                const result = await response.json();
+                console.log('✅ Case data received:', result);
+                displayCaseData(result);
+            } catch (error) {
+                console.error('❌ Error loading case:', error);
+                showError(`Unable to load case: ${error.message}. Ensure backend is running on http://localhost:8000`);
+            }
+        }
+
+        // ===== INIT =====
+        document.addEventListener('DOMContentLoaded', () => {
+            loadCaseDetails();
+            const input = document.getElementById('manualCNRInput');
+            if (input) input.addEventListener('keypress', (e) => { if (e.key === 'Enter') loadManualCase(); });
+        });
+    </script>
+</body>
+</html>

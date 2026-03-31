@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuriSight - Access Court Case Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #2563eb; --primary-dark: #1d4ed8; --primary-light: #3b82f6;
+            --secondary: #64748b; --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+            --dark: #0f172a; --dark-light: #1e293b;
+            --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1; --gray-400: #94a3b8; --gray-500: #64748b;
+            --gray-600: #475569; --gray-700: #334155; --gray-800: #1e293b;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+            color: var(--gray-800); line-height: 1.6; min-height: 100vh;
+        }
+        .navbar {
+            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
+            box-shadow: var(--shadow); padding: 0; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+        }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 16px 32px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-brand {
+            font-size: 24px; font-weight: 700; background: var(--gradient-primary);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            display: flex; align-items: center; gap: 10px; text-decoration: none;
+        }
+        .nav-brand i { font-size: 28px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+        .nav-link {
+            text-decoration: none; color: var(--gray-600); font-weight: 500; font-size: 14px;
+            transition: all 0.3s ease; padding: 8px 16px; border-radius: 8px;
+        }
+        .nav-link:hover { color: var(--primary); background: rgba(37, 99, 235, 0.05); }
+        .nav-link.active { color: var(--primary); }
+        .btn-login {
+            background: var(--gradient-primary); color: white !important;
+            padding: 10px 24px !important; border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+        .btn-login:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4); }
+        .main-container { 
+            margin-top: 80px; 
+            padding: 60px 32px; 
+            max-width: 1200px; 
+            margin-left: auto; 
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-section { 
+            text-align: center; 
+            margin-bottom: 50px; 
+            animation: fadeInUp 0.8s ease;
+            position: relative;
+        }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .hero-title {
+            font-size: 56px; font-weight: 700; background: var(--gradient-primary);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 16px; letter-spacing: -1px;
+        }
+        .hero-tagline { font-size: 22px; color: var(--gray-600); margin-bottom: 48px; font-weight: 400; }
+        .search-container {
+            max-width: 700px; 
+            margin: 0 auto 50px; 
+            background: white; 
+            padding: 40px;
+            border-radius: 20px; 
+            box-shadow: var(--shadow-xl); 
+            animation: fadeInUp 0.8s ease 0.2s both;
+            position: relative;
+            z-index: 10;
+        }
+        .search-label { font-size: 16px; font-weight: 600; color: var(--gray-700); margin-bottom: 16px; display: block; text-align: left; }
+        .search-wrapper { display: flex; gap: 12px; align-items: stretch; }
+        .search-input-wrapper { flex: 1; position: relative; }
+        .search-input {
+            width: 100%; padding: 16px 20px; border: 2px solid var(--gray-200);
+            border-radius: 12px; font-size: 16px; font-family: inherit;
+            transition: all 0.3s ease; outline: none;
+        }
+        .search-input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1); }
+        .search-input::placeholder { color: var(--gray-400); }
+        .search-hint { font-size: 13px; color: var(--gray-500); margin-top: 8px; text-align: left; }
+        .search-hint strong { color: var(--primary); }
+        .btn-search {
+            padding: 16px 40px; background: var(--gradient-primary); color: white;
+            border: none; border-radius: 12px; font-size: 16px; font-weight: 600;
+            cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            display: flex; align-items: center; gap: 10px;
+        }
+        .btn-search:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4); }
+        .btn-search:active { transform: translateY(0); }
+        
+        /* ===== FIXED: ADMIN SEARCH HISTORY SECTION ===== */
+        .admin-section {
+            max-width: 900px;
+            margin: 0 auto 60px;  /* Changed: Proper bottom margin */
+            animation: fadeInUp 0.8s ease 0.5s both;
+            position: relative;
+            z-index: 5;
+            clear: both;  /* Added: Clear any floats */
+        }
+        
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding: 24px;  /* Changed: Consistent padding */
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+            border-radius: 16px;
+            border: 2px solid rgba(37, 99, 235, 0.1);
+        }
+        
+        .admin-welcome {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .admin-welcome i {
+            font-size: 24px;
+            color: var(--primary);
+        }
+        
+        .admin-welcome-text h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+        
+        .admin-welcome-text p {
+            font-size: 13px;
+            color: var(--gray-500);
+        }
+        
+        .btn-logout {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
+            color: var(--danger);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-logout:hover {
+            background: var(--danger);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .search-history-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+        
+        .search-history-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 20px;  /* Changed: More bottom margin */
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .search-history-title i {
+            color: var(--primary);
+        }
+        
+        .history-list {
+            list-style: none;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .history-list::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .history-list::-webkit-scrollbar-track {
+            background: var(--gray-100);
+            border-radius: 10px;
+        }
+        
+        .history-list::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+        
+        .history-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            border-bottom: 1px solid var(--gray-100);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        
+        .history-item:hover {
+            background: var(--gray-50);
+            transform: translateX(4px);
+        }
+        
+        .history-item:last-child {
+            border-bottom: none;
+        }
+        
+        .history-info {
+            flex: 1;
+        }
+        
+        .history-cnr {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        
+        .history-case-number {
+            font-size: 13px;
+            color: var(--gray-600);
+            margin-bottom: 4px;
+        }
+        
+        .history-court {
+            font-size: 12px;
+            color: var(--gray-500);
+        }
+        
+        .history-meta {
+            text-align: right;
+            min-width: 150px;
+        }
+        
+        .history-status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+        
+        .status-pending {
+            background: rgba(245, 158, 11, 0.1);
+            color: #d97706;
+        }
+        
+        .status-disposed {
+            background: rgba(16, 185, 129, 0.1);
+            color: #059669;
+        }
+        
+        .history-date {
+            font-size: 12px;
+            color: var(--gray-400);
+        }
+        
+        .no-history {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--gray-500);
+        }
+        
+        .no-history i {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+        /* ===== END ADMIN SECTION ===== */
+        
+        /* ===== FIXED: FEATURES SECTION ===== */
+        .features-section {
+            animation: fadeInUp 0.8s ease 0.6s both;
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 24px;
+            position: relative;
+            z-index: 1;
+            clear: both;  /* Added: Clear any floats */
+        }
+        
+        .feature-card {
+            background: white; 
+            padding: 32px 24px; 
+            border-radius: 16px;
+            text-align: center; 
+            box-shadow: var(--shadow-md); 
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-xl); }
+        .feature-icon {
+            width: 64px; height: 64px; margin: 0 auto 16px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border-radius: 16px; display: flex; align-items: center; justify-content: center;
+            font-size: 28px; color: var(--primary);
+        }
+        .feature-title { font-size: 18px; font-weight: 600; color: var(--gray-800); margin-bottom: 8px; }
+        .feature-desc { font-size: 14px; color: var(--gray-500); line-height: 1.6; }
+        
+        .footer { 
+            background: white; 
+            margin-top: 80px; 
+            padding: 32px; 
+            text-align: center; 
+            box-shadow: var(--shadow);
+            position: relative;
+            z-index: 1;
+        }
+        .footer-text { color: var(--gray-500); font-size: 14px; }
+        
+        @media (max-width: 768px) {
+            .hero-title { font-size: 36px; }
+            .hero-tagline { font-size: 18px; }
+            .nav-container { padding: 16px 20px; }
+            .nav-links { gap: 16px; }
+            .search-container { padding: 24px; }
+            .search-wrapper { flex-direction: column; }
+            .btn-search { width: 100%; justify-content: center; }
+            .admin-header { flex-direction: column; gap: 16px; text-align: center; }
+            .history-item { flex-direction: column; align-items: flex-start; gap: 12px; }
+            .history-meta { text-align: left; }
+            .admin-section { margin-bottom: 40px; }
+            .features-section { margin-top: 20px; }
+        }
+        
+        .loading {
+            display: inline-block; width: 20px; height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3); border-radius: 50%;
+            border-top-color: white; animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .message {
+            padding: 16px 20px; border-radius: 12px; margin-bottom: 20px;
+            display: none; align-items: center; gap: 12px; animation: fadeIn 0.3s ease;
+        }
+        .message.show { display: flex; }
+        .message.error {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
+            color: #dc2626; border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+        .message.success {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+            color: #059669; border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+        .hidden { display: none !important; }
+        
+        /* Loading spinner for history */
+        .loading-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            color: var(--gray-500);
+        }
+        .loading-spinner {
+            width: 30px;
+            height: 30px;
+            border: 3px solid var(--gray-200);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <i class="fas fa-scale-balanced"></i>
+                JuriSight
+            </a>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active">Home</a></li>
+                <li><a href="#" class="nav-link">About</a></li>
+                <li id="navLoginBtn">
+                    <a href="admin-login.html" class="nav-link btn-login">
+                        <i class="fas fa-user-shield"></i> Admin Login
+                    </a>
+                </li>
+                <li id="navLogoutBtn" class="hidden">
+                    <a href="#" class="nav-link" onclick="logout(); return false;" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%); color: var(--danger);">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="hero-section">
+            <h1 class="hero-title">JuriSight</h1>
+            <p class="hero-tagline">Access Justice Information Instantly</p>
+        </div>
+
+        <div class="search-container">
+            <label class="search-label"><i class="fas fa-search" style="margin-right: 8px;"></i> Search Your Case</label>
+            <div class="search-wrapper">
+                <div class="search-input-wrapper">
+                    <input type="text" class="search-input" id="cnrInput" placeholder="Enter CNR Number" autocomplete="off">
+                    <div class="search-hint"><strong>Format:</strong> Any CNR format accepted (All States)</div>
+                </div>
+                <button class="btn-search" onclick="searchCase()">
+                    <i class="fas fa-arrow-right"></i> 
+                    <span>Search</span>
+                </button>
+            </div>
+            <div id="messageContainer" class="message"></div>
+        </div>
+
+        <!-- ===== ADMIN SEARCH HISTORY SECTION (Only Visible After Login) ===== -->
+        <div id="adminSection" class="admin-section hidden">
+            <div class="admin-header">
+                <div class="admin-welcome">
+                    <i class="fas fa-user-shield"></i>
+                    <div class="admin-welcome-text">
+                        <h3>Welcome, <span id="adminUsername">Admin</span></h3>
+                        <p>View your previously searched cases below</p>
+                    </div>
+                </div>
+                <button class="btn-logout" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </div>
+
+            <div class="search-history-card">
+                <h3 class="search-history-title">
+                    <i class="fas fa-history"></i>
+                    Previously Searched Cases
+                </h3>
+                <div id="searchHistoryContainer">
+                    <div class="loading-container">
+                        <div class="loading-spinner"></div>
+                        <p>Loading search history...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ===== END ADMIN SECTION ===== -->
+
+        <div class="features-section">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                <h3 class="feature-title">Instant Access</h3>
+                <p class="feature-desc">Get case information in seconds with our fast search system</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+                <h3 class="feature-title">Secure & Private</h3>
+                <p class="feature-desc">Your case information is protected with enterprise-grade security</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                <h3 class="feature-title">Real-Time Updates</h3>
+                <p class="feature-desc">Stay informed with live case status and hearing updates</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-mobile-screen"></i></div>
+                <h3 class="feature-title">Mobile Friendly</h3>
+                <p class="feature-desc">Access your case information anytime, anywhere on any device</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p class="footer-text">
+            © 2024 JuriSight - Simplifying Access to Justice | 
+            <a href="#" style="color: var(--primary); text-decoration: none;">Help</a> | 
+            <a href="#" style="color: var(--primary); text-decoration: none;">Contact</a> | 
+            <a href="#" style="color: var(--primary); text-decoration: none;">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <script>
+        let sessionToken = localStorage.getItem('adminSessionToken');
+        let adminUsername = localStorage.getItem('adminUsername');
+
+        // Check session on page load
+        document.addEventListener('DOMContentLoaded', async () => {
+            if (sessionToken) {
+                await verifySession();
+            }
+        });
+
+        async function verifySession() {
+            try {
+                const response = await fetch(`http://localhost:8000/api/auth/verify?session_token=${sessionToken}`);
+                const result = await response.json();
+
+                if (result.valid) {
+                    showAdminSection(result.username);
+                    loadSearchHistory();
+                } else {
+                    clearSession();
+                }
+            } catch (error) {
+                console.error('Session verification failed:', error);
+                clearSession();
+            }
+        }
+
+        function showAdminSection(username) {
+            document.getElementById('adminSection').classList.remove('hidden');
+            document.getElementById('navLoginBtn').classList.add('hidden');
+            document.getElementById('navLogoutBtn').classList.remove('hidden');
+            document.getElementById('adminUsername').textContent = username;
+            adminUsername = username;
+        }
+
+        function hideAdminSection() {
+            document.getElementById('adminSection').classList.add('hidden');
+            document.getElementById('navLoginBtn').classList.remove('hidden');
+            document.getElementById('navLogoutBtn').classList.add('hidden');
+        }
+
+        function clearSession() {
+            sessionToken = null;
+            adminUsername = null;
+            localStorage.removeItem('adminSessionToken');
+            localStorage.removeItem('adminUsername');
+            hideAdminSection();
+        }
+
+        async function loadSearchHistory() {
+            try {
+                const response = await fetch(`http://localhost:8000/api/admin/search-history?session_token=${sessionToken}&limit=20`);
+                const result = await response.json();
+
+                const container = document.getElementById('searchHistoryContainer');
+
+                if (result.success && result.history && result.history.length > 0) {
+                    let html = '<ul class="history-list">';
+                    result.history.forEach(item => {
+                        const statusClass = (item.status || '').toLowerCase() === 'disposed' ? 'status-disposed' : 'status-pending';
+                        const searchedDate = new Date(item.searched_at).toLocaleDateString('en-US', {
+                            year: 'numeric', month: 'short', day: 'numeric',
+                            hour: '2-digit', minute: '2-digit'
+                        });
+                        html += `
+                            <li class="history-item" onclick="window.location.href='case-details.html?cnr=${encodeURIComponent(item.cnr_number)}'">
+                                <div class="history-info">
+                                    <div class="history-cnr">${item.cnr_number}</div>
+                                    <div class="history-case-number">${item.case_number || 'N/A'}</div>
+                                    <div class="history-court">${item.court_name || 'Unknown Court'}</div>
+                                </div>
+                                <div class="history-meta">
+                                    <span class="history-status ${statusClass}">${(item.status || 'PENDING').replace(/_/g, ' ')}</span>
+                                    <div class="history-date">${searchedDate}</div>
+                                </div>
+                            </li>
+                        `;
+                    });
+                    html += '</ul>';
+                    container.innerHTML = html;
+                } else {
+                    container.innerHTML = `
+                        <div class="no-history">
+                            <i class="fas fa-folder-open"></i>
+                            <p>No search history yet</p>
+                            <p style="font-size: 13px; margin-top: 8px;">Search for cases to see them here</p>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Failed to load search history:', error);
+                document.getElementById('searchHistoryContainer').innerHTML = `
+                    <div class="no-history">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Failed to load search history</p>
+                    </div>
+                `;
+            }
+        }
+
+        async function logout() {
+            try {
+                await fetch('http://localhost:8000/api/auth/logout', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ session_token: sessionToken })
+                });
+            } catch (error) {
+                console.error('Logout error:', error);
+            }
+            clearSession();
+            showMessage('success', 'Logged out successfully');
+        }
+
+        async function searchCase() {
+            const cnrInput = document.getElementById('cnrInput');
+            const cnrNumber = cnrInput.value.trim();
+            const searchBtn = document.querySelector('.btn-search');
+
+            if (!cnrNumber) {
+                showMessage('error', 'Please enter a CNR number');
+                cnrInput.focus();
+                return;
+            }
+
+            const originalBtnContent = searchBtn.innerHTML;
+            searchBtn.innerHTML = '<span class="loading"></span><span>Searching...</span>';
+            searchBtn.disabled = true;
+
+            try {
+                const url = sessionToken 
+                    ? `http://localhost:8000/api/case/${encodeURIComponent(cnrNumber)}?session_token=${sessionToken}`
+                    : `http://localhost:8000/api/case/${encodeURIComponent(cnrNumber)}`;
+
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.detail || `HTTP ${response.status}`);
+                }
+
+                const result = await response.json();
+                console.log('Search result:', result);
+                
+                if (result.data || result.raw_data) {
+                    showMessage('success', 'Case found! Redirecting...');
+                    setTimeout(() => {
+                        window.location.href = `case-details.html?cnr=${encodeURIComponent(cnrNumber)}`;
+                    }, 1000);
+                } else {
+                    throw new Error('No case data found');
+                }
+
+            } catch (error) {
+                console.error('Search error:', error);
+                showMessage('error', error.message || 'Unable to connect to server. Please try again.');
+                searchBtn.innerHTML = originalBtnContent;
+                searchBtn.disabled = false;
+            }
+        }
+
+        function showMessage(type, text) {
+            const messageContainer = document.getElementById('messageContainer');
+            messageContainer.className = `message ${type} show`;
+            messageContainer.innerHTML = `
+                <i class="fas ${type === 'error' ? 'fa-circle-exclamation' : 'fa-circle-check'}"></i>
+                <span>${text}</span>
+            `;
+            setTimeout(() => messageContainer.classList.remove('show'), 5000);
+        }
+
+        document.getElementById('cnrInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') searchCase();
+        });
+
+        document.getElementById('cnrInput').addEventListener('input', function(e) {
+            e.target.value = e.target.value.toUpperCase();
+        });
+    </script>
+</body>
+</html>

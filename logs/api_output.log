@@ -1,0 +1,4812 @@
+2026-03-26 19:44:05,929 - INFO - 🚀 Starting JuriSight Backend Server...
+2026-03-26 19:45:13,112 - INFO - ✅ Admin login successful: admin
+2026-03-26 19:45:14,903 - INFO - HTTP Request: GET https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/admin_search_history?select=%2A&order=searched_at.desc&limit=20 "HTTP/2 200 OK"
+2026-03-26 19:45:24,033 - INFO - 
+============================================================
+2026-03-26 19:45:24,034 - INFO - 🚨 API REQUEST FOR CNR: MHAH180013742011
+2026-03-26 19:45:24,034 - INFO - ============================================================
+2026-03-26 19:45:39,099 - ERROR - ❌ API Fetch Attempt 1 failed: HTTPSConnectionPool(host='webapi.ecourtsindia.com', port=443): Read timed out. (read timeout=15)
+2026-03-26 19:45:54,414 - INFO - ✅ API Fetch Successful (Attempt 2)
+2026-03-26 19:45:54,414 - INFO - 
+📋 RAW API PAYLOAD FOR MHAH180013742011
+2026-03-26 19:45:54,416 - INFO - {
+  "caseNumber": "201915004202011",
+  "district": "Ahmednagar",
+  "state": "MH",
+  "stateCode": "1",
+  "districtCode": "26",
+  "complexCode": 1010306,
+  "courtCode": 14,
+  "caseTypeSub": "CODE OF CRIMINAL PROCEDURE - 127",
+  "courtName": "Civil and Criminal Court, Rahuri",
+  "courtNo": 14,
+  "firDetails": {},
+  "historyOfCaseHearings": [
+    {
+      "judge": "",
+      "businessOnDate": "2012-01-12",
+      "hearingDate": "2012-02-13",
+      "purposeOfListing": "Notice_Unready"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-02-13",
+      "hearingDate": "2012-03-05",
+      "purposeOfListing": "Notice_Unready"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-03-05",
+      "hearingDate": "2012-03-20",
+      "purposeOfListing": "Notice_Unready"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-03-20",
+      "hearingDate": "2012-04-08",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-04-08",
+      "hearingDate": "2012-05-15",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-05-15",
+      "hearingDate": "2012-06-26",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-06-26",
+      "hearingDate": "2012-08-03",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-08-03",
+      "hearingDate": "2012-09-04",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-09-04",
+      "hearingDate": "2012-09-25",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-09-25",
+      "hearingDate": "2012-10-07",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-10-07",
+      "hearingDate": "2012-10-14",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-10-14",
+      "hearingDate": "2012-11-09",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-11-09",
+      "hearingDate": "2012-12-19",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-12-19",
+      "hearingDate": "2013-02-20",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-02-20",
+      "hearingDate": "2013-02-28",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-02-28",
+      "hearingDate": "2013-03-16",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-03-16",
+      "hearingDate": "2013-07-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-07-29",
+      "hearingDate": "2013-08-23",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-08-23",
+      "hearingDate": "2013-10-08",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-10-08",
+      "hearingDate": "2013-11-20",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-11-20",
+      "hearingDate": "2013-12-24",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-12-24",
+      "hearingDate": "2014-01-04",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-01-04",
+      "hearingDate": "2014-01-28",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-01-28",
+      "hearingDate": "2014-02-15",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-02-15",
+      "hearingDate": "2014-02-27",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-02-27",
+      "hearingDate": "2014-03-13",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-03-13",
+      "hearingDate": "2014-03-21",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-03-21",
+      "hearingDate": "2014-05-09",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-05-09",
+      "hearingDate": "2014-05-23",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-05-23",
+      "hearingDate": "2014-07-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-07-17",
+      "hearingDate": "2014-09-16",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-09-16",
+      "hearingDate": "2014-09-25",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-09-25",
+      "hearingDate": "2014-12-16",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-12-16",
+      "hearingDate": "2015-01-30",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-01-30",
+      "hearingDate": "2015-03-19",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-03-19",
+      "hearingDate": "2015-05-22",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-05-22",
+      "hearingDate": "2015-07-24",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-07-24",
+      "hearingDate": "2015-08-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-08-29",
+      "hearingDate": "2015-10-26",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-10-26",
+      "hearingDate": "2015-12-22",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-12-22",
+      "hearingDate": "2016-03-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-03-17",
+      "hearingDate": "2016-06-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-06-17",
+      "hearingDate": "2016-07-27",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-07-27",
+      "hearingDate": "2016-10-05",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-10-05",
+      "hearingDate": "2017-01-09",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-01-09",
+      "hearingDate": "2017-04-07",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-04-07",
+      "hearingDate": "2017-06-19",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-06-19",
+      "hearingDate": "2017-08-03",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-08-03",
+      "hearingDate": "2017-09-01",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-09-01",
+      "hearingDate": "2018-02-05",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-02-05",
+      "hearingDate": "2018-03-07",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-03-07",
+      "hearingDate": "2018-05-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-05-29",
+      "hearingDate": "2018-07-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-07-17",
+      "hearingDate": "2018-11-28",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-11-28",
+      "hearingDate": "2019-01-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-01-29",
+      "hearingDate": "2019-03-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-03-29",
+      "hearingDate": "2019-05-10",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-05-10",
+      "hearingDate": "2019-06-11",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-06-11",
+      "hearingDate": "2019-08-06",
+      "purposeOfListing": "Stayed by District Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-08-06",
+      "hearingDate": "2019-09-16",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-09-16",
+      "hearingDate": "2019-11-29",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-11-29",
+      "hearingDate": "2020-02-20",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-02-20",
+      "hearingDate": "2020-05-12",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-05-12",
+      "hearingDate": "2020-06-20",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-06-20",
+      "hearingDate": "2020-09-28",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-09-28",
+      "hearingDate": "2020-11-24",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-11-24",
+      "hearingDate": "2021-01-13",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-01-13",
+      "hearingDate": "2021-03-25",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-03-25",
+      "hearingDate": "2021-06-28",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-06-28",
+      "hearingDate": "2021-08-05",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-08-05",
+      "hearingDate": "2021-09-27",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-09-27",
+      "hearingDate": "2021-12-06",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-12-06",
+      "hearingDate": "2022-03-04",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-03-04",
+      "hearingDate": "2022-06-06",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-06-06",
+      "hearingDate": "2022-07-07",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-07-07",
+      "hearingDate": "2022-09-16",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-09-16",
+      "hearingDate": "2022-11-16",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-11-16",
+      "hearingDate": "2023-01-25",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-01-25",
+      "hearingDate": "2023-04-20",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-04-20",
+      "hearingDate": "2023-07-28",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-07-28",
+      "hearingDate": "2023-09-30",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-09-30",
+      "hearingDate": "2023-11-30",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-11-30",
+      "hearingDate": "2024-01-31",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-01-31",
+      "hearingDate": "2024-04-30",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-04-30",
+      "hearingDate": "2024-07-31",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-07-31",
+      "hearingDate": "2024-09-13",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-09-13",
+      "hearingDate": "2024-10-11",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-10-11",
+      "hearingDate": "2024-11-18",
+      "purposeOfListing": "Steps"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-11-18",
+      "hearingDate": "2024-12-19",
+      "purposeOfListing": "Filing of Say on Exh___Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-12-19",
+      "hearingDate": "2025-01-20",
+      "purposeOfListing": "Filing of Say on Exh___Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-01-20",
+      "hearingDate": "2025-02-27",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-02-27",
+      "hearingDate": "2025-03-27",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-03-27",
+      "hearingDate": "2025-04-25",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-04-25",
+      "hearingDate": "2025-07-21",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-07-21",
+      "hearingDate": "2025-08-25",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-08-25",
+      "hearingDate": "2025-10-14",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-10-14",
+      "hearingDate": "2025-11-21",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-11-21",
+      "hearingDate": "2025-12-15",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-12-15",
+      "hearingDate": "2026-01-15",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-01-15",
+      "hearingDate": "2026-02-14",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-02-14",
+      "hearingDate": "2026-03-05",
+      "purposeOfListing": "Steps_Unready"
+    }
+  ],
+  "filedDocuments": [],
+  "judgeCode": [
+    "18"
+  ],
+  "subordinateCourt": {},
+  "linkCases": [
+    {
+      "caseNumber": "20000000000"
+    }
+  ],
+  "purpose": "Steps_Unready",
+  "stageOfCase": "FOR_STEPS",
+  "stageOfCaseRaw": "Steps_Unready",
+  "lastHearingDate": "2026-02-14",
+  "interimOrders": [],
+  "processes": [],
+  "cnr": "MHAH180013742011",
+  "cnrCourtCode": "MHAH18",
+  "courtComplexCode": "MHAH18",
+  "cnrCaseNumber": "0013742011",
+  "cnrYear": "2011",
+  "caseType": "CRL_MA",
+  "caseTypeRaw": "Cri.M.A.",
+  "caseStatus": "PENDING",
+  "filingNumber": "1500420/2011",
+  "filingDate": "2011-12-01",
+  "registrationNumber": "1500420/2011",
+  "registrationDate": "2011-12-01",
+  "firstHearingDate": "2012-01-12",
+  "nextHearingDate": "2026-03-05",
+  "caseDurationDays": 5189,
+  "filingToFirstHearingDays": 42,
+  "judges": [
+    "2nd Jt. Civil Judge J.D. And JMFC"
+  ],
+  "petitioners": [
+    "Mhatardev Tukaram Lomate"
+  ],
+  "petitionerAdvocates": [
+    "Lambe S. G."
+  ],
+  "respondents": [
+    "Shobha Bhagwant Joshi",
+    "Vishwambhar Mhatardeo Lomte"
+  ],
+  "respondentAdvocates": [],
+  "caseCategoryFacetPath": "Criminal Law/Other Criminal Matters",
+  "hasOrders": false,
+  "hasJudgments": false,
+  "orderCount": 0,
+  "interimOrderCount": 0,
+  "judgmentCount": 0,
+  "hearingCount": 101,
+  "iaCount": 0,
+  "taggedMatters": [],
+  "earlierCourtDetails": [],
+  "interlocutoryApplications": [],
+  "listingDates": [],
+  "notices": [],
+  "judgmentOrders": [],
+  "caveatDetails": []
+}
+2026-03-26 19:45:55,075 - INFO - HTTP Request: DELETE https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records?cnr_number=eq.MHAH180013742011 "HTTP/2 200 OK"
+2026-03-26 19:45:55,217 - INFO - HTTP Request: POST https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records "HTTP/2 201 Created"
+2026-03-26 19:45:55,218 - INFO - 💾 Successfully saved to Supabase: MHAH180013742011
+2026-03-26 19:45:55,356 - INFO - HTTP Request: POST https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/admin_search_history "HTTP/2 201 Created"
+2026-03-26 19:45:55,357 - INFO - 💾 Search history saved for CNR: MHAH180013742011
+2026-03-26 19:45:55,358 - INFO - ✅ Response sent successfully for CNR: MHAH180013742011
+2026-03-26 19:45:55,358 - INFO - ============================================================
+
+2026-03-26 19:45:55,366 - INFO - 
+============================================================
+2026-03-26 19:45:55,366 - INFO - 🚨 API REQUEST FOR CNR: MHAH180013742011
+2026-03-26 19:45:55,367 - INFO - ============================================================
+2026-03-26 19:45:55,488 - INFO - ✅ API Fetch Successful (Attempt 1)
+2026-03-26 19:45:55,488 - INFO - 
+📋 RAW API PAYLOAD FOR MHAH180013742011
+2026-03-26 19:45:55,488 - INFO - {
+  "caseNumber": "201915004202011",
+  "district": "Ahmednagar",
+  "state": "MH",
+  "stateCode": "1",
+  "districtCode": "26",
+  "complexCode": 1010306,
+  "courtCode": 14,
+  "caseTypeSub": "CODE OF CRIMINAL PROCEDURE - 127",
+  "courtName": "Civil and Criminal Court, Rahuri",
+  "courtNo": 14,
+  "firDetails": {},
+  "historyOfCaseHearings": [
+    {
+      "judge": "",
+      "businessOnDate": "2012-01-12",
+      "hearingDate": "2012-02-13",
+      "purposeOfListing": "Notice_Unready"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-02-13",
+      "hearingDate": "2012-03-05",
+      "purposeOfListing": "Notice_Unready"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-03-05",
+      "hearingDate": "2012-03-20",
+      "purposeOfListing": "Notice_Unready"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-03-20",
+      "hearingDate": "2012-04-08",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-04-08",
+      "hearingDate": "2012-05-15",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-05-15",
+      "hearingDate": "2012-06-26",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-06-26",
+      "hearingDate": "2012-08-03",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-08-03",
+      "hearingDate": "2012-09-04",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-09-04",
+      "hearingDate": "2012-09-25",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-09-25",
+      "hearingDate": "2012-10-07",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-10-07",
+      "hearingDate": "2012-10-14",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-10-14",
+      "hearingDate": "2012-11-09",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-11-09",
+      "hearingDate": "2012-12-19",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-12-19",
+      "hearingDate": "2013-02-20",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-02-20",
+      "hearingDate": "2013-02-28",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-02-28",
+      "hearingDate": "2013-03-16",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-03-16",
+      "hearingDate": "2013-07-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-07-29",
+      "hearingDate": "2013-08-23",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-08-23",
+      "hearingDate": "2013-10-08",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-10-08",
+      "hearingDate": "2013-11-20",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-11-20",
+      "hearingDate": "2013-12-24",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-12-24",
+      "hearingDate": "2014-01-04",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-01-04",
+      "hearingDate": "2014-01-28",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-01-28",
+      "hearingDate": "2014-02-15",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-02-15",
+      "hearingDate": "2014-02-27",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-02-27",
+      "hearingDate": "2014-03-13",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-03-13",
+      "hearingDate": "2014-03-21",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-03-21",
+      "hearingDate": "2014-05-09",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-05-09",
+      "hearingDate": "2014-05-23",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-05-23",
+      "hearingDate": "2014-07-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-07-17",
+      "hearingDate": "2014-09-16",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-09-16",
+      "hearingDate": "2014-09-25",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-09-25",
+      "hearingDate": "2014-12-16",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-12-16",
+      "hearingDate": "2015-01-30",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-01-30",
+      "hearingDate": "2015-03-19",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-03-19",
+      "hearingDate": "2015-05-22",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-05-22",
+      "hearingDate": "2015-07-24",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-07-24",
+      "hearingDate": "2015-08-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-08-29",
+      "hearingDate": "2015-10-26",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-10-26",
+      "hearingDate": "2015-12-22",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-12-22",
+      "hearingDate": "2016-03-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-03-17",
+      "hearingDate": "2016-06-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-06-17",
+      "hearingDate": "2016-07-27",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-07-27",
+      "hearingDate": "2016-10-05",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-10-05",
+      "hearingDate": "2017-01-09",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-01-09",
+      "hearingDate": "2017-04-07",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-04-07",
+      "hearingDate": "2017-06-19",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-06-19",
+      "hearingDate": "2017-08-03",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-08-03",
+      "hearingDate": "2017-09-01",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-09-01",
+      "hearingDate": "2018-02-05",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-02-05",
+      "hearingDate": "2018-03-07",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-03-07",
+      "hearingDate": "2018-05-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-05-29",
+      "hearingDate": "2018-07-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-07-17",
+      "hearingDate": "2018-11-28",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-11-28",
+      "hearingDate": "2019-01-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-01-29",
+      "hearingDate": "2019-03-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-03-29",
+      "hearingDate": "2019-05-10",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-05-10",
+      "hearingDate": "2019-06-11",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-06-11",
+      "hearingDate": "2019-08-06",
+      "purposeOfListing": "Stayed by District Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-08-06",
+      "hearingDate": "2019-09-16",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-09-16",
+      "hearingDate": "2019-11-29",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-11-29",
+      "hearingDate": "2020-02-20",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-02-20",
+      "hearingDate": "2020-05-12",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-05-12",
+      "hearingDate": "2020-06-20",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-06-20",
+      "hearingDate": "2020-09-28",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-09-28",
+      "hearingDate": "2020-11-24",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-11-24",
+      "hearingDate": "2021-01-13",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-01-13",
+      "hearingDate": "2021-03-25",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-03-25",
+      "hearingDate": "2021-06-28",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-06-28",
+      "hearingDate": "2021-08-05",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-08-05",
+      "hearingDate": "2021-09-27",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-09-27",
+      "hearingDate": "2021-12-06",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-12-06",
+      "hearingDate": "2022-03-04",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-03-04",
+      "hearingDate": "2022-06-06",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-06-06",
+      "hearingDate": "2022-07-07",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-07-07",
+      "hearingDate": "2022-09-16",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-09-16",
+      "hearingDate": "2022-11-16",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-11-16",
+      "hearingDate": "2023-01-25",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-01-25",
+      "hearingDate": "2023-04-20",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-04-20",
+      "hearingDate": "2023-07-28",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-07-28",
+      "hearingDate": "2023-09-30",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-09-30",
+      "hearingDate": "2023-11-30",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-11-30",
+      "hearingDate": "2024-01-31",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-01-31",
+      "hearingDate": "2024-04-30",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-04-30",
+      "hearingDate": "2024-07-31",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-07-31",
+      "hearingDate": "2024-09-13",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-09-13",
+      "hearingDate": "2024-10-11",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-10-11",
+      "hearingDate": "2024-11-18",
+      "purposeOfListing": "Steps"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-11-18",
+      "hearingDate": "2024-12-19",
+      "purposeOfListing": "Filing of Say on Exh___Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-12-19",
+      "hearingDate": "2025-01-20",
+      "purposeOfListing": "Filing of Say on Exh___Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-01-20",
+      "hearingDate": "2025-02-27",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-02-27",
+      "hearingDate": "2025-03-27",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-03-27",
+      "hearingDate": "2025-04-25",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-04-25",
+      "hearingDate": "2025-07-21",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-07-21",
+      "hearingDate": "2025-08-25",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-08-25",
+      "hearingDate": "2025-10-14",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-10-14",
+      "hearingDate": "2025-11-21",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-11-21",
+      "hearingDate": "2025-12-15",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-12-15",
+      "hearingDate": "2026-01-15",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-01-15",
+      "hearingDate": "2026-02-14",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-02-14",
+      "hearingDate": "2026-03-05",
+      "purposeOfListing": "Steps_Unready"
+    }
+  ],
+  "filedDocuments": [],
+  "judgeCode": [
+    "18"
+  ],
+  "subordinateCourt": {},
+  "linkCases": [
+    {
+      "caseNumber": "20000000000"
+    }
+  ],
+  "purpose": "Steps_Unready",
+  "stageOfCase": "FOR_STEPS",
+  "stageOfCaseRaw": "Steps_Unready",
+  "lastHearingDate": "2026-02-14",
+  "interimOrders": [],
+  "processes": [],
+  "cnr": "MHAH180013742011",
+  "cnrCourtCode": "MHAH18",
+  "courtComplexCode": "MHAH18",
+  "cnrCaseNumber": "0013742011",
+  "cnrYear": "2011",
+  "caseType": "CRL_MA",
+  "caseTypeRaw": "Cri.M.A.",
+  "caseStatus": "PENDING",
+  "filingNumber": "1500420/2011",
+  "filingDate": "2011-12-01",
+  "registrationNumber": "1500420/2011",
+  "registrationDate": "2011-12-01",
+  "firstHearingDate": "2012-01-12",
+  "nextHearingDate": "2026-03-05",
+  "caseDurationDays": 5189,
+  "filingToFirstHearingDays": 42,
+  "judges": [
+    "2nd Jt. Civil Judge J.D. And JMFC"
+  ],
+  "petitioners": [
+    "Mhatardev Tukaram Lomate"
+  ],
+  "petitionerAdvocates": [
+    "Lambe S. G."
+  ],
+  "respondents": [
+    "Shobha Bhagwant Joshi",
+    "Vishwambhar Mhatardeo Lomte"
+  ],
+  "respondentAdvocates": [],
+  "caseCategoryFacetPath": "Criminal Law/Other Criminal Matters",
+  "hasOrders": false,
+  "hasJudgments": false,
+  "orderCount": 0,
+  "interimOrderCount": 0,
+  "judgmentCount": 0,
+  "hearingCount": 101,
+  "iaCount": 0,
+  "taggedMatters": [],
+  "earlierCourtDetails": [],
+  "interlocutoryApplications": [],
+  "listingDates": [],
+  "notices": [],
+  "judgmentOrders": [],
+  "caveatDetails": []
+}
+2026-03-26 19:45:55,618 - INFO - HTTP Request: DELETE https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records?cnr_number=eq.MHAH180013742011 "HTTP/2 200 OK"
+2026-03-26 19:45:55,761 - INFO - HTTP Request: POST https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records "HTTP/2 201 Created"
+2026-03-26 19:45:55,762 - INFO - 💾 Successfully saved to Supabase: MHAH180013742011
+2026-03-26 19:45:55,763 - INFO - ✅ Response sent successfully for CNR: MHAH180013742011
+2026-03-26 19:45:55,763 - INFO - ============================================================
+
+2026-03-26 19:45:57,037 - INFO - 
+============================================================
+2026-03-26 19:45:57,037 - INFO - 🚨 API REQUEST FOR CNR: MHAH180013742011
+2026-03-26 19:45:57,037 - INFO - ============================================================
+2026-03-26 19:45:57,180 - INFO - ✅ API Fetch Successful (Attempt 1)
+2026-03-26 19:45:57,180 - INFO - 
+📋 RAW API PAYLOAD FOR MHAH180013742011
+2026-03-26 19:45:57,181 - INFO - {
+  "caseNumber": "201915004202011",
+  "district": "Ahmednagar",
+  "state": "MH",
+  "stateCode": "1",
+  "districtCode": "26",
+  "complexCode": 1010306,
+  "courtCode": 14,
+  "caseTypeSub": "CODE OF CRIMINAL PROCEDURE - 127",
+  "courtName": "Civil and Criminal Court, Rahuri",
+  "courtNo": 14,
+  "firDetails": {},
+  "historyOfCaseHearings": [
+    {
+      "judge": "",
+      "businessOnDate": "2012-01-12",
+      "hearingDate": "2012-02-13",
+      "purposeOfListing": "Notice_Unready"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-02-13",
+      "hearingDate": "2012-03-05",
+      "purposeOfListing": "Notice_Unready"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-03-05",
+      "hearingDate": "2012-03-20",
+      "purposeOfListing": "Notice_Unready"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-03-20",
+      "hearingDate": "2012-04-08",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-04-08",
+      "hearingDate": "2012-05-15",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-05-15",
+      "hearingDate": "2012-06-26",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-06-26",
+      "hearingDate": "2012-08-03",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-08-03",
+      "hearingDate": "2012-09-04",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-09-04",
+      "hearingDate": "2012-09-25",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-09-25",
+      "hearingDate": "2012-10-07",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-10-07",
+      "hearingDate": "2012-10-14",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-10-14",
+      "hearingDate": "2012-11-09",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-11-09",
+      "hearingDate": "2012-12-19",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-12-19",
+      "hearingDate": "2013-02-20",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-02-20",
+      "hearingDate": "2013-02-28",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-02-28",
+      "hearingDate": "2013-03-16",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-03-16",
+      "hearingDate": "2013-07-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-07-29",
+      "hearingDate": "2013-08-23",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-08-23",
+      "hearingDate": "2013-10-08",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-10-08",
+      "hearingDate": "2013-11-20",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-11-20",
+      "hearingDate": "2013-12-24",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-12-24",
+      "hearingDate": "2014-01-04",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-01-04",
+      "hearingDate": "2014-01-28",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-01-28",
+      "hearingDate": "2014-02-15",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-02-15",
+      "hearingDate": "2014-02-27",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-02-27",
+      "hearingDate": "2014-03-13",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-03-13",
+      "hearingDate": "2014-03-21",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-03-21",
+      "hearingDate": "2014-05-09",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-05-09",
+      "hearingDate": "2014-05-23",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-05-23",
+      "hearingDate": "2014-07-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-07-17",
+      "hearingDate": "2014-09-16",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-09-16",
+      "hearingDate": "2014-09-25",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-09-25",
+      "hearingDate": "2014-12-16",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-12-16",
+      "hearingDate": "2015-01-30",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-01-30",
+      "hearingDate": "2015-03-19",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-03-19",
+      "hearingDate": "2015-05-22",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-05-22",
+      "hearingDate": "2015-07-24",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-07-24",
+      "hearingDate": "2015-08-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-08-29",
+      "hearingDate": "2015-10-26",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-10-26",
+      "hearingDate": "2015-12-22",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-12-22",
+      "hearingDate": "2016-03-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-03-17",
+      "hearingDate": "2016-06-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-06-17",
+      "hearingDate": "2016-07-27",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-07-27",
+      "hearingDate": "2016-10-05",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-10-05",
+      "hearingDate": "2017-01-09",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-01-09",
+      "hearingDate": "2017-04-07",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-04-07",
+      "hearingDate": "2017-06-19",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-06-19",
+      "hearingDate": "2017-08-03",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-08-03",
+      "hearingDate": "2017-09-01",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-09-01",
+      "hearingDate": "2018-02-05",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-02-05",
+      "hearingDate": "2018-03-07",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-03-07",
+      "hearingDate": "2018-05-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-05-29",
+      "hearingDate": "2018-07-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-07-17",
+      "hearingDate": "2018-11-28",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-11-28",
+      "hearingDate": "2019-01-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-01-29",
+      "hearingDate": "2019-03-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-03-29",
+      "hearingDate": "2019-05-10",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-05-10",
+      "hearingDate": "2019-06-11",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-06-11",
+      "hearingDate": "2019-08-06",
+      "purposeOfListing": "Stayed by District Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-08-06",
+      "hearingDate": "2019-09-16",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-09-16",
+      "hearingDate": "2019-11-29",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-11-29",
+      "hearingDate": "2020-02-20",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-02-20",
+      "hearingDate": "2020-05-12",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-05-12",
+      "hearingDate": "2020-06-20",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-06-20",
+      "hearingDate": "2020-09-28",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-09-28",
+      "hearingDate": "2020-11-24",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-11-24",
+      "hearingDate": "2021-01-13",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-01-13",
+      "hearingDate": "2021-03-25",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-03-25",
+      "hearingDate": "2021-06-28",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-06-28",
+      "hearingDate": "2021-08-05",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-08-05",
+      "hearingDate": "2021-09-27",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-09-27",
+      "hearingDate": "2021-12-06",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-12-06",
+      "hearingDate": "2022-03-04",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-03-04",
+      "hearingDate": "2022-06-06",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-06-06",
+      "hearingDate": "2022-07-07",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-07-07",
+      "hearingDate": "2022-09-16",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-09-16",
+      "hearingDate": "2022-11-16",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-11-16",
+      "hearingDate": "2023-01-25",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-01-25",
+      "hearingDate": "2023-04-20",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-04-20",
+      "hearingDate": "2023-07-28",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-07-28",
+      "hearingDate": "2023-09-30",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-09-30",
+      "hearingDate": "2023-11-30",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-11-30",
+      "hearingDate": "2024-01-31",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-01-31",
+      "hearingDate": "2024-04-30",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-04-30",
+      "hearingDate": "2024-07-31",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-07-31",
+      "hearingDate": "2024-09-13",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-09-13",
+      "hearingDate": "2024-10-11",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-10-11",
+      "hearingDate": "2024-11-18",
+      "purposeOfListing": "Steps"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-11-18",
+      "hearingDate": "2024-12-19",
+      "purposeOfListing": "Filing of Say on Exh___Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-12-19",
+      "hearingDate": "2025-01-20",
+      "purposeOfListing": "Filing of Say on Exh___Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-01-20",
+      "hearingDate": "2025-02-27",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-02-27",
+      "hearingDate": "2025-03-27",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-03-27",
+      "hearingDate": "2025-04-25",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-04-25",
+      "hearingDate": "2025-07-21",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-07-21",
+      "hearingDate": "2025-08-25",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-08-25",
+      "hearingDate": "2025-10-14",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-10-14",
+      "hearingDate": "2025-11-21",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-11-21",
+      "hearingDate": "2025-12-15",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-12-15",
+      "hearingDate": "2026-01-15",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-01-15",
+      "hearingDate": "2026-02-14",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-02-14",
+      "hearingDate": "2026-03-05",
+      "purposeOfListing": "Steps_Unready"
+    }
+  ],
+  "filedDocuments": [],
+  "judgeCode": [
+    "18"
+  ],
+  "subordinateCourt": {},
+  "linkCases": [
+    {
+      "caseNumber": "20000000000"
+    }
+  ],
+  "purpose": "Steps_Unready",
+  "stageOfCase": "FOR_STEPS",
+  "stageOfCaseRaw": "Steps_Unready",
+  "lastHearingDate": "2026-02-14",
+  "interimOrders": [],
+  "processes": [],
+  "cnr": "MHAH180013742011",
+  "cnrCourtCode": "MHAH18",
+  "courtComplexCode": "MHAH18",
+  "cnrCaseNumber": "0013742011",
+  "cnrYear": "2011",
+  "caseType": "CRL_MA",
+  "caseTypeRaw": "Cri.M.A.",
+  "caseStatus": "PENDING",
+  "filingNumber": "1500420/2011",
+  "filingDate": "2011-12-01",
+  "registrationNumber": "1500420/2011",
+  "registrationDate": "2011-12-01",
+  "firstHearingDate": "2012-01-12",
+  "nextHearingDate": "2026-03-05",
+  "caseDurationDays": 5189,
+  "filingToFirstHearingDays": 42,
+  "judges": [
+    "2nd Jt. Civil Judge J.D. And JMFC"
+  ],
+  "petitioners": [
+    "Mhatardev Tukaram Lomate"
+  ],
+  "petitionerAdvocates": [
+    "Lambe S. G."
+  ],
+  "respondents": [
+    "Shobha Bhagwant Joshi",
+    "Vishwambhar Mhatardeo Lomte"
+  ],
+  "respondentAdvocates": [],
+  "caseCategoryFacetPath": "Criminal Law/Other Criminal Matters",
+  "hasOrders": false,
+  "hasJudgments": false,
+  "orderCount": 0,
+  "interimOrderCount": 0,
+  "judgmentCount": 0,
+  "hearingCount": 101,
+  "iaCount": 0,
+  "taggedMatters": [],
+  "earlierCourtDetails": [],
+  "interlocutoryApplications": [],
+  "listingDates": [],
+  "notices": [],
+  "judgmentOrders": [],
+  "caveatDetails": []
+}
+2026-03-26 19:45:57,311 - INFO - HTTP Request: DELETE https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records?cnr_number=eq.MHAH180013742011 "HTTP/2 200 OK"
+2026-03-26 19:45:57,449 - INFO - HTTP Request: POST https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records "HTTP/2 201 Created"
+2026-03-26 19:45:57,450 - INFO - 💾 Successfully saved to Supabase: MHAH180013742011
+2026-03-26 19:45:57,450 - INFO - ✅ Response sent successfully for CNR: MHAH180013742011
+2026-03-26 19:45:57,450 - INFO - ============================================================
+
+2026-03-26 19:46:26,435 - INFO - ✅ Admin login successful: admin
+2026-03-26 19:46:28,033 - INFO - HTTP Request: GET https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/admin_search_history?select=%2A&order=searched_at.desc&limit=20 "HTTP/2 200 OK"
+2026-03-26 19:46:30,036 - INFO - 
+============================================================
+2026-03-26 19:46:30,036 - INFO - 🚨 API REQUEST FOR CNR: MHAH180013742011
+2026-03-26 19:46:30,037 - INFO - ============================================================
+2026-03-26 19:46:30,110 - INFO - ✅ API Fetch Successful (Attempt 1)
+2026-03-26 19:46:30,110 - INFO - 
+📋 RAW API PAYLOAD FOR MHAH180013742011
+2026-03-26 19:46:30,110 - INFO - {
+  "caseNumber": "201915004202011",
+  "district": "Ahmednagar",
+  "state": "MH",
+  "stateCode": "1",
+  "districtCode": "26",
+  "complexCode": 1010306,
+  "courtCode": 14,
+  "caseTypeSub": "CODE OF CRIMINAL PROCEDURE - 127",
+  "courtName": "Civil and Criminal Court, Rahuri",
+  "courtNo": 14,
+  "firDetails": {},
+  "historyOfCaseHearings": [
+    {
+      "judge": "",
+      "businessOnDate": "2012-01-12",
+      "hearingDate": "2012-02-13",
+      "purposeOfListing": "Notice_Unready"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-02-13",
+      "hearingDate": "2012-03-05",
+      "purposeOfListing": "Notice_Unready"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-03-05",
+      "hearingDate": "2012-03-20",
+      "purposeOfListing": "Notice_Unready"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-03-20",
+      "hearingDate": "2012-04-08",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-04-08",
+      "hearingDate": "2012-05-15",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-05-15",
+      "hearingDate": "2012-06-26",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-06-26",
+      "hearingDate": "2012-08-03",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-08-03",
+      "hearingDate": "2012-09-04",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-09-04",
+      "hearingDate": "2012-09-25",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-09-25",
+      "hearingDate": "2012-10-07",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-10-07",
+      "hearingDate": "2012-10-14",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-10-14",
+      "hearingDate": "2012-11-09",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-11-09",
+      "hearingDate": "2012-12-19",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-12-19",
+      "hearingDate": "2013-02-20",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-02-20",
+      "hearingDate": "2013-02-28",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-02-28",
+      "hearingDate": "2013-03-16",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-03-16",
+      "hearingDate": "2013-07-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-07-29",
+      "hearingDate": "2013-08-23",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-08-23",
+      "hearingDate": "2013-10-08",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-10-08",
+      "hearingDate": "2013-11-20",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-11-20",
+      "hearingDate": "2013-12-24",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-12-24",
+      "hearingDate": "2014-01-04",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-01-04",
+      "hearingDate": "2014-01-28",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-01-28",
+      "hearingDate": "2014-02-15",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-02-15",
+      "hearingDate": "2014-02-27",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-02-27",
+      "hearingDate": "2014-03-13",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-03-13",
+      "hearingDate": "2014-03-21",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-03-21",
+      "hearingDate": "2014-05-09",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-05-09",
+      "hearingDate": "2014-05-23",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-05-23",
+      "hearingDate": "2014-07-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-07-17",
+      "hearingDate": "2014-09-16",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-09-16",
+      "hearingDate": "2014-09-25",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-09-25",
+      "hearingDate": "2014-12-16",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-12-16",
+      "hearingDate": "2015-01-30",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-01-30",
+      "hearingDate": "2015-03-19",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-03-19",
+      "hearingDate": "2015-05-22",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-05-22",
+      "hearingDate": "2015-07-24",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-07-24",
+      "hearingDate": "2015-08-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-08-29",
+      "hearingDate": "2015-10-26",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-10-26",
+      "hearingDate": "2015-12-22",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-12-22",
+      "hearingDate": "2016-03-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-03-17",
+      "hearingDate": "2016-06-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-06-17",
+      "hearingDate": "2016-07-27",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-07-27",
+      "hearingDate": "2016-10-05",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-10-05",
+      "hearingDate": "2017-01-09",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-01-09",
+      "hearingDate": "2017-04-07",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-04-07",
+      "hearingDate": "2017-06-19",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-06-19",
+      "hearingDate": "2017-08-03",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-08-03",
+      "hearingDate": "2017-09-01",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-09-01",
+      "hearingDate": "2018-02-05",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-02-05",
+      "hearingDate": "2018-03-07",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-03-07",
+      "hearingDate": "2018-05-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-05-29",
+      "hearingDate": "2018-07-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-07-17",
+      "hearingDate": "2018-11-28",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-11-28",
+      "hearingDate": "2019-01-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-01-29",
+      "hearingDate": "2019-03-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-03-29",
+      "hearingDate": "2019-05-10",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-05-10",
+      "hearingDate": "2019-06-11",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-06-11",
+      "hearingDate": "2019-08-06",
+      "purposeOfListing": "Stayed by District Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-08-06",
+      "hearingDate": "2019-09-16",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-09-16",
+      "hearingDate": "2019-11-29",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-11-29",
+      "hearingDate": "2020-02-20",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-02-20",
+      "hearingDate": "2020-05-12",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-05-12",
+      "hearingDate": "2020-06-20",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-06-20",
+      "hearingDate": "2020-09-28",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-09-28",
+      "hearingDate": "2020-11-24",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-11-24",
+      "hearingDate": "2021-01-13",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-01-13",
+      "hearingDate": "2021-03-25",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-03-25",
+      "hearingDate": "2021-06-28",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-06-28",
+      "hearingDate": "2021-08-05",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-08-05",
+      "hearingDate": "2021-09-27",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-09-27",
+      "hearingDate": "2021-12-06",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-12-06",
+      "hearingDate": "2022-03-04",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-03-04",
+      "hearingDate": "2022-06-06",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-06-06",
+      "hearingDate": "2022-07-07",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-07-07",
+      "hearingDate": "2022-09-16",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-09-16",
+      "hearingDate": "2022-11-16",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-11-16",
+      "hearingDate": "2023-01-25",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-01-25",
+      "hearingDate": "2023-04-20",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-04-20",
+      "hearingDate": "2023-07-28",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-07-28",
+      "hearingDate": "2023-09-30",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-09-30",
+      "hearingDate": "2023-11-30",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-11-30",
+      "hearingDate": "2024-01-31",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-01-31",
+      "hearingDate": "2024-04-30",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-04-30",
+      "hearingDate": "2024-07-31",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-07-31",
+      "hearingDate": "2024-09-13",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-09-13",
+      "hearingDate": "2024-10-11",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-10-11",
+      "hearingDate": "2024-11-18",
+      "purposeOfListing": "Steps"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-11-18",
+      "hearingDate": "2024-12-19",
+      "purposeOfListing": "Filing of Say on Exh___Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-12-19",
+      "hearingDate": "2025-01-20",
+      "purposeOfListing": "Filing of Say on Exh___Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-01-20",
+      "hearingDate": "2025-02-27",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-02-27",
+      "hearingDate": "2025-03-27",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-03-27",
+      "hearingDate": "2025-04-25",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-04-25",
+      "hearingDate": "2025-07-21",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-07-21",
+      "hearingDate": "2025-08-25",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-08-25",
+      "hearingDate": "2025-10-14",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-10-14",
+      "hearingDate": "2025-11-21",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-11-21",
+      "hearingDate": "2025-12-15",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-12-15",
+      "hearingDate": "2026-01-15",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-01-15",
+      "hearingDate": "2026-02-14",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-02-14",
+      "hearingDate": "2026-03-05",
+      "purposeOfListing": "Steps_Unready"
+    }
+  ],
+  "filedDocuments": [],
+  "judgeCode": [
+    "18"
+  ],
+  "subordinateCourt": {},
+  "linkCases": [
+    {
+      "caseNumber": "20000000000"
+    }
+  ],
+  "purpose": "Steps_Unready",
+  "stageOfCase": "FOR_STEPS",
+  "stageOfCaseRaw": "Steps_Unready",
+  "lastHearingDate": "2026-02-14",
+  "interimOrders": [],
+  "processes": [],
+  "cnr": "MHAH180013742011",
+  "cnrCourtCode": "MHAH18",
+  "courtComplexCode": "MHAH18",
+  "cnrCaseNumber": "0013742011",
+  "cnrYear": "2011",
+  "caseType": "CRL_MA",
+  "caseTypeRaw": "Cri.M.A.",
+  "caseStatus": "PENDING",
+  "filingNumber": "1500420/2011",
+  "filingDate": "2011-12-01",
+  "registrationNumber": "1500420/2011",
+  "registrationDate": "2011-12-01",
+  "firstHearingDate": "2012-01-12",
+  "nextHearingDate": "2026-03-05",
+  "caseDurationDays": 5189,
+  "filingToFirstHearingDays": 42,
+  "judges": [
+    "2nd Jt. Civil Judge J.D. And JMFC"
+  ],
+  "petitioners": [
+    "Mhatardev Tukaram Lomate"
+  ],
+  "petitionerAdvocates": [
+    "Lambe S. G."
+  ],
+  "respondents": [
+    "Shobha Bhagwant Joshi",
+    "Vishwambhar Mhatardeo Lomte"
+  ],
+  "respondentAdvocates": [],
+  "caseCategoryFacetPath": "Criminal Law/Other Criminal Matters",
+  "hasOrders": false,
+  "hasJudgments": false,
+  "orderCount": 0,
+  "interimOrderCount": 0,
+  "judgmentCount": 0,
+  "hearingCount": 101,
+  "iaCount": 0,
+  "taggedMatters": [],
+  "earlierCourtDetails": [],
+  "interlocutoryApplications": [],
+  "listingDates": [],
+  "notices": [],
+  "judgmentOrders": [],
+  "caveatDetails": []
+}
+2026-03-26 19:46:30,224 - INFO - HTTP Request: DELETE https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records?cnr_number=eq.MHAH180013742011 "HTTP/2 200 OK"
+2026-03-26 19:46:30,334 - INFO - HTTP Request: POST https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records "HTTP/2 201 Created"
+2026-03-26 19:46:30,335 - INFO - 💾 Successfully saved to Supabase: MHAH180013742011
+2026-03-26 19:46:30,336 - INFO - ✅ Response sent successfully for CNR: MHAH180013742011
+2026-03-26 19:46:30,337 - INFO - ============================================================
+
+2026-03-26 19:46:38,903 - INFO - ✅ Admin logout successful
+2026-03-26 19:46:42,374 - INFO - 
+============================================================
+2026-03-26 19:46:42,374 - INFO - 🚨 API REQUEST FOR CNR: MHAH180013742011
+2026-03-26 19:46:42,375 - INFO - ============================================================
+2026-03-26 19:46:42,452 - INFO - ✅ API Fetch Successful (Attempt 1)
+2026-03-26 19:46:42,452 - INFO - 
+📋 RAW API PAYLOAD FOR MHAH180013742011
+2026-03-26 19:46:42,453 - INFO - {
+  "caseNumber": "201915004202011",
+  "district": "Ahmednagar",
+  "state": "MH",
+  "stateCode": "1",
+  "districtCode": "26",
+  "complexCode": 1010306,
+  "courtCode": 14,
+  "caseTypeSub": "CODE OF CRIMINAL PROCEDURE - 127",
+  "courtName": "Civil and Criminal Court, Rahuri",
+  "courtNo": 14,
+  "firDetails": {},
+  "historyOfCaseHearings": [
+    {
+      "judge": "",
+      "businessOnDate": "2012-01-12",
+      "hearingDate": "2012-02-13",
+      "purposeOfListing": "Notice_Unready"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-02-13",
+      "hearingDate": "2012-03-05",
+      "purposeOfListing": "Notice_Unready"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-03-05",
+      "hearingDate": "2012-03-20",
+      "purposeOfListing": "Notice_Unready"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-03-20",
+      "hearingDate": "2012-04-08",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-04-08",
+      "hearingDate": "2012-05-15",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-05-15",
+      "hearingDate": "2012-06-26",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-06-26",
+      "hearingDate": "2012-08-03",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-08-03",
+      "hearingDate": "2012-09-04",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-09-04",
+      "hearingDate": "2012-09-25",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-09-25",
+      "hearingDate": "2012-10-07",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-10-07",
+      "hearingDate": "2012-10-14",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-10-14",
+      "hearingDate": "2012-11-09",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-11-09",
+      "hearingDate": "2012-12-19",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-12-19",
+      "hearingDate": "2013-02-20",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-02-20",
+      "hearingDate": "2013-02-28",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-02-28",
+      "hearingDate": "2013-03-16",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-03-16",
+      "hearingDate": "2013-07-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-07-29",
+      "hearingDate": "2013-08-23",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-08-23",
+      "hearingDate": "2013-10-08",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-10-08",
+      "hearingDate": "2013-11-20",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-11-20",
+      "hearingDate": "2013-12-24",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2013-12-24",
+      "hearingDate": "2014-01-04",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-01-04",
+      "hearingDate": "2014-01-28",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-01-28",
+      "hearingDate": "2014-02-15",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-02-15",
+      "hearingDate": "2014-02-27",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-02-27",
+      "hearingDate": "2014-03-13",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-03-13",
+      "hearingDate": "2014-03-21",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-03-21",
+      "hearingDate": "2014-05-09",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-05-09",
+      "hearingDate": "2014-05-23",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-05-23",
+      "hearingDate": "2014-07-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-07-17",
+      "hearingDate": "2014-09-16",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-09-16",
+      "hearingDate": "2014-09-25",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-09-25",
+      "hearingDate": "2014-12-16",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2014-12-16",
+      "hearingDate": "2015-01-30",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-01-30",
+      "hearingDate": "2015-03-19",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-03-19",
+      "hearingDate": "2015-05-22",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-05-22",
+      "hearingDate": "2015-07-24",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-07-24",
+      "hearingDate": "2015-08-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-08-29",
+      "hearingDate": "2015-10-26",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-10-26",
+      "hearingDate": "2015-12-22",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2015-12-22",
+      "hearingDate": "2016-03-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-03-17",
+      "hearingDate": "2016-06-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-06-17",
+      "hearingDate": "2016-07-27",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-07-27",
+      "hearingDate": "2016-10-05",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2016-10-05",
+      "hearingDate": "2017-01-09",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-01-09",
+      "hearingDate": "2017-04-07",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-04-07",
+      "hearingDate": "2017-06-19",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-06-19",
+      "hearingDate": "2017-08-03",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-08-03",
+      "hearingDate": "2017-09-01",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2017-09-01",
+      "hearingDate": "2018-02-05",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-02-05",
+      "hearingDate": "2018-03-07",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-03-07",
+      "hearingDate": "2018-05-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-05-29",
+      "hearingDate": "2018-07-17",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-07-17",
+      "hearingDate": "2018-11-28",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2018-11-28",
+      "hearingDate": "2019-01-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-01-29",
+      "hearingDate": "2019-03-29",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-03-29",
+      "hearingDate": "2019-05-10",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-05-10",
+      "hearingDate": "2019-06-11",
+      "purposeOfListing": "Depositing Amount"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-06-11",
+      "hearingDate": "2019-08-06",
+      "purposeOfListing": "Stayed by District Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-08-06",
+      "hearingDate": "2019-09-16",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-09-16",
+      "hearingDate": "2019-11-29",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2019-11-29",
+      "hearingDate": "2020-02-20",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-02-20",
+      "hearingDate": "2020-05-12",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-05-12",
+      "hearingDate": "2020-06-20",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-06-20",
+      "hearingDate": "2020-09-28",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-09-28",
+      "hearingDate": "2020-11-24",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2020-11-24",
+      "hearingDate": "2021-01-13",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-01-13",
+      "hearingDate": "2021-03-25",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-03-25",
+      "hearingDate": "2021-06-28",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-06-28",
+      "hearingDate": "2021-08-05",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-08-05",
+      "hearingDate": "2021-09-27",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-09-27",
+      "hearingDate": "2021-12-06",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2021-12-06",
+      "hearingDate": "2022-03-04",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-03-04",
+      "hearingDate": "2022-06-06",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-06-06",
+      "hearingDate": "2022-07-07",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-07-07",
+      "hearingDate": "2022-09-16",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-09-16",
+      "hearingDate": "2022-11-16",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2022-11-16",
+      "hearingDate": "2023-01-25",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-01-25",
+      "hearingDate": "2023-04-20",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-04-20",
+      "hearingDate": "2023-07-28",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-07-28",
+      "hearingDate": "2023-09-30",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-09-30",
+      "hearingDate": "2023-11-30",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2023-11-30",
+      "hearingDate": "2024-01-31",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-01-31",
+      "hearingDate": "2024-04-30",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-04-30",
+      "hearingDate": "2024-07-31",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-07-31",
+      "hearingDate": "2024-09-13",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-09-13",
+      "hearingDate": "2024-10-11",
+      "purposeOfListing": "Stayed by Honble High Court"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-10-11",
+      "hearingDate": "2024-11-18",
+      "purposeOfListing": "Steps"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-11-18",
+      "hearingDate": "2024-12-19",
+      "purposeOfListing": "Filing of Say on Exh___Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-12-19",
+      "hearingDate": "2025-01-20",
+      "purposeOfListing": "Filing of Say on Exh___Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-01-20",
+      "hearingDate": "2025-02-27",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-02-27",
+      "hearingDate": "2025-03-27",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-03-27",
+      "hearingDate": "2025-04-25",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-04-25",
+      "hearingDate": "2025-07-21",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-07-21",
+      "hearingDate": "2025-08-25",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-08-25",
+      "hearingDate": "2025-10-14",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-10-14",
+      "hearingDate": "2025-11-21",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-11-21",
+      "hearingDate": "2025-12-15",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-12-15",
+      "hearingDate": "2026-01-15",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-01-15",
+      "hearingDate": "2026-02-14",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-02-14",
+      "hearingDate": "2026-03-05",
+      "purposeOfListing": "Steps_Unready"
+    }
+  ],
+  "filedDocuments": [],
+  "judgeCode": [
+    "18"
+  ],
+  "subordinateCourt": {},
+  "linkCases": [
+    {
+      "caseNumber": "20000000000"
+    }
+  ],
+  "purpose": "Steps_Unready",
+  "stageOfCase": "FOR_STEPS",
+  "stageOfCaseRaw": "Steps_Unready",
+  "lastHearingDate": "2026-02-14",
+  "interimOrders": [],
+  "processes": [],
+  "cnr": "MHAH180013742011",
+  "cnrCourtCode": "MHAH18",
+  "courtComplexCode": "MHAH18",
+  "cnrCaseNumber": "0013742011",
+  "cnrYear": "2011",
+  "caseType": "CRL_MA",
+  "caseTypeRaw": "Cri.M.A.",
+  "caseStatus": "PENDING",
+  "filingNumber": "1500420/2011",
+  "filingDate": "2011-12-01",
+  "registrationNumber": "1500420/2011",
+  "registrationDate": "2011-12-01",
+  "firstHearingDate": "2012-01-12",
+  "nextHearingDate": "2026-03-05",
+  "caseDurationDays": 5189,
+  "filingToFirstHearingDays": 42,
+  "judges": [
+    "2nd Jt. Civil Judge J.D. And JMFC"
+  ],
+  "petitioners": [
+    "Mhatardev Tukaram Lomate"
+  ],
+  "petitionerAdvocates": [
+    "Lambe S. G."
+  ],
+  "respondents": [
+    "Shobha Bhagwant Joshi",
+    "Vishwambhar Mhatardeo Lomte"
+  ],
+  "respondentAdvocates": [],
+  "caseCategoryFacetPath": "Criminal Law/Other Criminal Matters",
+  "hasOrders": false,
+  "hasJudgments": false,
+  "orderCount": 0,
+  "interimOrderCount": 0,
+  "judgmentCount": 0,
+  "hearingCount": 101,
+  "iaCount": 0,
+  "taggedMatters": [],
+  "earlierCourtDetails": [],
+  "interlocutoryApplications": [],
+  "listingDates": [],
+  "notices": [],
+  "judgmentOrders": [],
+  "caveatDetails": []
+}
+2026-03-26 19:46:42,668 - INFO - HTTP Request: DELETE https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records?cnr_number=eq.MHAH180013742011 "HTTP/2 200 OK"
+2026-03-26 19:46:42,808 - INFO - HTTP Request: POST https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records "HTTP/2 201 Created"
+2026-03-26 19:46:42,809 - INFO - 💾 Successfully saved to Supabase: MHAH180013742011
+2026-03-26 19:46:42,809 - INFO - ✅ Response sent successfully for CNR: MHAH180013742011
+2026-03-26 19:46:42,810 - INFO - ============================================================
+
+2026-03-26 19:46:43,859 - INFO - 
+============================================================
+2026-03-26 19:46:43,860 - INFO - 🚨 API REQUEST FOR CNR: MHAH180013742011
+2026-03-26 19:46:43,861 - INFO - ============================================================
+2026-03-26 19:46:43,915 - ERROR - ❌ API Fetch Attempt 1 failed: 402 Client Error: Payment Required for url: https://webapi.ecourtsindia.com/api/partner/case/MHAH180013742011
+2026-03-26 19:46:45,969 - ERROR - ❌ API Fetch Attempt 2 failed: 402 Client Error: Payment Required for url: https://webapi.ecourtsindia.com/api/partner/case/MHAH180013742011
+2026-03-26 19:46:47,976 - ERROR - ❌ Failed to connect to eCourts API after 2 attempts
+2026-03-26 19:46:56,786 - INFO - 
+============================================================
+2026-03-26 19:46:56,787 - INFO - 🚨 API REQUEST FOR CNR: MHAH180013742011
+2026-03-26 19:46:56,787 - INFO - ============================================================
+2026-03-26 19:46:57,364 - ERROR - ❌ API Fetch Attempt 1 failed: 402 Client Error: Payment Required for url: https://webapi.ecourtsindia.com/api/partner/case/MHAH180013742011
+2026-03-26 19:46:59,721 - ERROR - ❌ API Fetch Attempt 2 failed: 402 Client Error: Payment Required for url: https://webapi.ecourtsindia.com/api/partner/case/MHAH180013742011
+2026-03-26 19:47:01,733 - ERROR - ❌ Failed to connect to eCourts API after 2 attempts
+2026-03-26 19:47:05,054 - INFO - 
+============================================================
+2026-03-26 19:47:05,054 - INFO - 🚨 API REQUEST FOR CNR: MHAH180013742011
+2026-03-26 19:47:05,055 - INFO - ============================================================
+2026-03-26 19:47:05,737 - ERROR - ❌ API Fetch Attempt 1 failed: 402 Client Error: Payment Required for url: https://webapi.ecourtsindia.com/api/partner/case/MHAH180013742011
+2026-03-26 19:47:10,659 - ERROR - ❌ API Fetch Attempt 2 failed: 402 Client Error: Payment Required for url: https://webapi.ecourtsindia.com/api/partner/case/MHAH180013742011
+2026-03-26 19:47:12,660 - ERROR - ❌ Failed to connect to eCourts API after 2 attempts
+2026-03-26 19:47:25,799 - INFO - 
+============================================================
+2026-03-26 19:47:25,799 - INFO - 🚨 API REQUEST FOR CNR: MHAH180019772023
+2026-03-26 19:47:25,799 - INFO - ============================================================
+2026-03-26 19:47:40,829 - ERROR - ❌ API Fetch Attempt 1 failed: HTTPSConnectionPool(host='webapi.ecourtsindia.com', port=443): Read timed out. (read timeout=15)
+2026-03-26 19:47:57,865 - ERROR - ❌ API Fetch Attempt 2 failed: HTTPSConnectionPool(host='webapi.ecourtsindia.com', port=443): Read timed out. (read timeout=15)
+2026-03-26 19:47:59,868 - ERROR - ❌ Failed to connect to eCourts API after 2 attempts
+2026-03-26 19:48:24,800 - INFO - ✅ Admin login successful: admin
+2026-03-26 19:48:26,508 - INFO - HTTP Request: GET https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/admin_search_history?select=%2A&order=searched_at.desc&limit=20 "HTTP/2 200 OK"
+2026-03-26 19:48:31,404 - INFO - 
+============================================================
+2026-03-26 19:48:31,404 - INFO - 🚨 API REQUEST FOR CNR: MHAH180019772023
+2026-03-26 19:48:31,405 - INFO - ============================================================
+2026-03-26 19:48:32,919 - ERROR - ❌ API Fetch Attempt 1 failed: 402 Client Error: Payment Required for url: https://webapi.ecourtsindia.com/api/partner/case/MHAH180019772023
+2026-03-26 19:48:49,950 - ERROR - ❌ API Fetch Attempt 2 failed: HTTPSConnectionPool(host='webapi.ecourtsindia.com', port=443): Read timed out. (read timeout=15)
+2026-03-26 19:48:51,963 - ERROR - ❌ Failed to connect to eCourts API after 2 attempts
+2026-03-26 19:49:02,375 - INFO - 
+============================================================
+2026-03-26 19:49:02,375 - INFO - 🚨 API REQUEST FOR CNR: MHAH180043062025
+2026-03-26 19:49:02,375 - INFO - ============================================================
+2026-03-26 19:49:17,418 - ERROR - ❌ API Fetch Attempt 1 failed: HTTPSConnectionPool(host='webapi.ecourtsindia.com', port=443): Read timed out. (read timeout=15)
+2026-03-26 19:49:23,573 - ERROR - ❌ API Fetch Attempt 2 failed: 402 Client Error: Payment Required for url: https://webapi.ecourtsindia.com/api/partner/case/MHAH180043062025
+2026-03-26 19:49:25,587 - ERROR - ❌ Failed to connect to eCourts API after 2 attempts
+2026-03-26 19:52:57,975 - INFO - HTTP Request: GET https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/admin_search_history?select=%2A&order=searched_at.desc&limit=20 "HTTP/2 200 OK"
+2026-03-26 19:53:02,286 - INFO - ✅ Admin logout successful
+2026-03-26 19:53:35,153 - INFO - ✅ Admin login successful: admin
+2026-03-26 19:53:36,756 - INFO - HTTP Request: GET https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/admin_search_history?select=%2A&order=searched_at.desc&limit=20 "HTTP/2 200 OK"
+2026-03-26 19:58:21,852 - INFO - 🚀 Starting JuriSight Backend Server...
+2026-03-26 19:58:36,073 - INFO - 
+============================================================
+2026-03-26 19:58:36,075 - INFO - 🚨 API REQUEST FOR CNR: MHAH180043062025
+2026-03-26 19:58:36,075 - INFO - ============================================================
+2026-03-26 19:58:36,683 - INFO - ✅ API Fetch Successful (Attempt 1)
+2026-03-26 19:58:36,683 - INFO - 
+📋 RAW API PAYLOAD FOR MHAH180043062025
+2026-03-26 19:58:36,683 - INFO - {
+  "caseNumber": "203400017332025",
+  "district": "Ahmednagar",
+  "state": "MH",
+  "stateCode": "1",
+  "districtCode": "26",
+  "complexCode": 1010306,
+  "courtCode": 14,
+  "caseTypeSub": "Bharatiya Nyaya Sanhita - 65(e)",
+  "courtName": "Civil and Criminal Court, Rahuri",
+  "courtNo": 14,
+  "firDetails": {},
+  "historyOfCaseHearings": [],
+  "filedDocuments": [],
+  "judgeCode": [
+    "18"
+  ],
+  "subordinateCourt": {},
+  "linkCases": [
+    {
+      "caseNumber": "0"
+    }
+  ],
+  "purpose": "First Order",
+  "stageOfCase": "UNKNOWN",
+  "stageOfCaseRaw": "First Order",
+  "lastHearingDate": "2026-01-15",
+  "interimOrders": [],
+  "processes": [],
+  "cnr": "MHAH180043062025",
+  "cnrCourtCode": "MHAH18",
+  "courtComplexCode": "MHAH18",
+  "cnrCaseNumber": "0043062025",
+  "cnrYear": "2025",
+  "caseType": "CC",
+  "caseTypeRaw": "S.C.C.",
+  "caseStatus": "PENDING",
+  "filingNumber": "2540/2025",
+  "filingDate": "2025-12-05",
+  "registrationNumber": "1733/2025",
+  "registrationDate": "2025-12-05",
+  "firstHearingDate": "2026-01-15",
+  "nextHearingDate": "2026-01-15",
+  "caseDurationDays": 41,
+  "filingToFirstHearingDays": 41,
+  "judges": [
+    "2nd Jt. Civil Judge J.D. And JMFC"
+  ],
+  "petitioners": [
+    "The State of Maharashtra through Rahuri Police Station"
+  ],
+  "petitionerAdvocates": [],
+  "respondents": [
+    "Bhaurao Lahanu Alias Nivrutti Pawar"
+  ],
+  "respondentAdvocates": [],
+  "caseCategoryFacetPath": "Administrative/Not Specified",
+  "hasOrders": false,
+  "hasJudgments": false,
+  "orderCount": 0,
+  "interimOrderCount": 0,
+  "judgmentCount": 0,
+  "hearingCount": 0,
+  "iaCount": 0,
+  "taggedMatters": [],
+  "earlierCourtDetails": [],
+  "interlocutoryApplications": [],
+  "listingDates": [],
+  "notices": [],
+  "judgmentOrders": [],
+  "caveatDetails": []
+}
+2026-03-26 19:58:37,219 - INFO - HTTP Request: DELETE https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records?cnr_number=eq.MHAH180043062025 "HTTP/2 200 OK"
+2026-03-26 19:58:37,355 - INFO - HTTP Request: POST https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records "HTTP/2 201 Created"
+2026-03-26 19:58:37,357 - INFO - 💾 Successfully saved to Supabase: MHAH180043062025
+2026-03-26 19:58:37,358 - INFO - ✅ Response sent successfully for CNR: MHAH180043062025
+2026-03-26 19:58:37,358 - INFO - ============================================================
+
+2026-03-26 19:58:38,419 - INFO - 
+============================================================
+2026-03-26 19:58:38,420 - INFO - 🚨 API REQUEST FOR CNR: MHAH180043062025
+2026-03-26 19:58:38,420 - INFO - ============================================================
+2026-03-26 19:58:39,066 - INFO - ✅ API Fetch Successful (Attempt 1)
+2026-03-26 19:58:39,066 - INFO - 
+📋 RAW API PAYLOAD FOR MHAH180043062025
+2026-03-26 19:58:39,066 - INFO - {
+  "caseNumber": "203400017332025",
+  "district": "Ahmednagar",
+  "state": "MH",
+  "stateCode": "1",
+  "districtCode": "26",
+  "complexCode": 1010306,
+  "courtCode": 14,
+  "caseTypeSub": "Bharatiya Nyaya Sanhita - 65(e)",
+  "courtName": "Civil and Criminal Court, Rahuri",
+  "courtNo": 14,
+  "firDetails": {},
+  "historyOfCaseHearings": [],
+  "filedDocuments": [],
+  "judgeCode": [
+    "18"
+  ],
+  "subordinateCourt": {},
+  "linkCases": [
+    {
+      "caseNumber": "0"
+    }
+  ],
+  "purpose": "First Order",
+  "stageOfCase": "UNKNOWN",
+  "stageOfCaseRaw": "First Order",
+  "lastHearingDate": "2026-01-15",
+  "interimOrders": [],
+  "processes": [],
+  "cnr": "MHAH180043062025",
+  "cnrCourtCode": "MHAH18",
+  "courtComplexCode": "MHAH18",
+  "cnrCaseNumber": "0043062025",
+  "cnrYear": "2025",
+  "caseType": "CC",
+  "caseTypeRaw": "S.C.C.",
+  "caseStatus": "PENDING",
+  "filingNumber": "2540/2025",
+  "filingDate": "2025-12-05",
+  "registrationNumber": "1733/2025",
+  "registrationDate": "2025-12-05",
+  "firstHearingDate": "2026-01-15",
+  "nextHearingDate": "2026-01-15",
+  "caseDurationDays": 41,
+  "filingToFirstHearingDays": 41,
+  "judges": [
+    "2nd Jt. Civil Judge J.D. And JMFC"
+  ],
+  "petitioners": [
+    "The State of Maharashtra through Rahuri Police Station"
+  ],
+  "petitionerAdvocates": [],
+  "respondents": [
+    "Bhaurao Lahanu Alias Nivrutti Pawar"
+  ],
+  "respondentAdvocates": [],
+  "caseCategoryFacetPath": "Administrative/Not Specified",
+  "hasOrders": false,
+  "hasJudgments": false,
+  "orderCount": 0,
+  "interimOrderCount": 0,
+  "judgmentCount": 0,
+  "hearingCount": 0,
+  "iaCount": 0,
+  "taggedMatters": [],
+  "earlierCourtDetails": [],
+  "interlocutoryApplications": [],
+  "listingDates": [],
+  "notices": [],
+  "judgmentOrders": [],
+  "caveatDetails": []
+}
+2026-03-26 19:58:39,183 - INFO - HTTP Request: DELETE https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records?cnr_number=eq.MHAH180043062025 "HTTP/2 200 OK"
+2026-03-26 19:58:39,296 - INFO - HTTP Request: POST https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records "HTTP/2 201 Created"
+2026-03-26 19:58:39,297 - INFO - 💾 Successfully saved to Supabase: MHAH180043062025
+2026-03-26 19:58:39,297 - INFO - ✅ Response sent successfully for CNR: MHAH180043062025
+2026-03-26 19:58:39,297 - INFO - ============================================================
+
+2026-03-26 20:02:18,654 - INFO - 
+============================================================
+2026-03-26 20:02:18,654 - INFO - 🚨 API REQUEST FOR CNR: MHAH180026872024
+2026-03-26 20:02:18,654 - INFO - ============================================================
+2026-03-26 20:02:33,701 - ERROR - ❌ API Fetch Attempt 1 failed: HTTPSConnectionPool(host='webapi.ecourtsindia.com', port=443): Read timed out. (read timeout=15)
+2026-03-26 20:02:39,779 - INFO - ✅ API Fetch Successful (Attempt 2)
+2026-03-26 20:02:39,779 - INFO - 
+📋 RAW API PAYLOAD FOR MHAH180026872024
+2026-03-26 20:02:39,779 - INFO - {
+  "caseNumber": "201900002042024",
+  "district": "Ahmednagar",
+  "state": "MH",
+  "stateCode": "1",
+  "districtCode": "26",
+  "complexCode": 1010306,
+  "courtCode": 14,
+  "caseTypeSub": "Bharatiya Nagarik Suraksha Sanhita - 144",
+  "courtName": "Civil and Criminal Court, Rahuri",
+  "courtNo": 14,
+  "firDetails": {},
+  "historyOfCaseHearings": [
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-11-13",
+      "hearingDate": "2024-12-21",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-12-21",
+      "hearingDate": "2025-01-22",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-01-22",
+      "hearingDate": "2025-03-07",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-03-07",
+      "hearingDate": "2025-06-17",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-06-17",
+      "hearingDate": "2025-06-23",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-06-23",
+      "hearingDate": "2025-07-29",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-07-29",
+      "hearingDate": "2025-09-11",
+      "purposeOfListing": "Awaiting Notice"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-09-11",
+      "hearingDate": "2025-10-30",
+      "purposeOfListing": "Awaiting Notice"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-10-30",
+      "hearingDate": "2025-11-20",
+      "purposeOfListing": "Awaiting Notice"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-11-20",
+      "hearingDate": "2025-12-06",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-12-06",
+      "hearingDate": "2026-01-15",
+      "purposeOfListing": "Awaiting Warrant"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-01-15",
+      "hearingDate": "2026-02-14",
+      "purposeOfListing": "Awaiting Warrant"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-02-14",
+      "hearingDate": "2026-03-16",
+      "purposeOfListing": "Awaiting Warrant"
+    }
+  ],
+  "filedDocuments": [],
+  "judgeCode": [
+    "18"
+  ],
+  "subordinateCourt": {},
+  "linkCases": [
+    {
+      "filingNumber": "MHAH180026872024",
+      "caseNumber": "201900002042024"
+    }
+  ],
+  "purpose": "Awaiting Warrant",
+  "stageOfCase": "UNKNOWN",
+  "stageOfCaseRaw": "Awaiting Warrant",
+  "lastHearingDate": "2026-02-14",
+  "interimOrders": [],
+  "processes": [],
+  "cnr": "MHAH180026872024",
+  "cnrCourtCode": "MHAH18",
+  "courtComplexCode": "MHAH18",
+  "cnrCaseNumber": "0026872024",
+  "cnrYear": "2024",
+  "caseType": "CRL_MA",
+  "caseTypeRaw": "Cri.M.A.",
+  "caseStatus": "PENDING",
+  "filingNumber": "2126/2024",
+  "filingDate": "2024-11-06",
+  "registrationNumber": "204/2024",
+  "registrationDate": "2024-11-07",
+  "firstHearingDate": "2024-11-13",
+  "nextHearingDate": "2026-03-16",
+  "caseDurationDays": 465,
+  "filingToFirstHearingDays": 7,
+  "judges": [
+    "2nd Jt. Civil Judge J.D. And JMFC"
+  ],
+  "petitioners": [
+    "Bebitai Bhausaheb Kulat"
+  ],
+  "petitionerAdvocates": [
+    "Kamble Pallavi S."
+  ],
+  "respondents": [
+    "Vitthal Bhausaheb Kulat",
+    "Anil Bhausaheb Kulat",
+    "Sunil Bhausaheb Kulat"
+  ],
+  "respondentAdvocates": [],
+  "caseCategoryFacetPath": "Administrative/Not Specified",
+  "hasOrders": false,
+  "hasJudgments": false,
+  "orderCount": 0,
+  "interimOrderCount": 0,
+  "judgmentCount": 0,
+  "hearingCount": 13,
+  "iaCount": 0,
+  "taggedMatters": [],
+  "earlierCourtDetails": [],
+  "interlocutoryApplications": [],
+  "listingDates": [],
+  "notices": [],
+  "judgmentOrders": [],
+  "caveatDetails": []
+}
+2026-03-26 20:02:40,402 - INFO - HTTP Request: DELETE https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records?cnr_number=eq.MHAH180026872024 "HTTP/2 200 OK"
+2026-03-26 20:02:40,557 - INFO - HTTP Request: POST https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records "HTTP/2 201 Created"
+2026-03-26 20:02:40,558 - INFO - 💾 Successfully saved to Supabase: MHAH180026872024
+2026-03-26 20:02:40,558 - INFO - ✅ Response sent successfully for CNR: MHAH180026872024
+2026-03-26 20:02:40,558 - INFO - ============================================================
+
+2026-03-26 20:02:42,003 - INFO - 
+============================================================
+2026-03-26 20:02:42,003 - INFO - 🚨 API REQUEST FOR CNR: MHAH180026872024
+2026-03-26 20:02:42,003 - INFO - ============================================================
+2026-03-26 20:02:53,238 - INFO - ✅ API Fetch Successful (Attempt 1)
+2026-03-26 20:02:53,239 - INFO - 
+📋 RAW API PAYLOAD FOR MHAH180026872024
+2026-03-26 20:02:53,239 - INFO - {
+  "caseNumber": "201900002042024",
+  "district": "Ahmednagar",
+  "state": "MH",
+  "stateCode": "1",
+  "districtCode": "26",
+  "complexCode": 1010306,
+  "courtCode": 14,
+  "caseTypeSub": "Bharatiya Nagarik Suraksha Sanhita - 144",
+  "courtName": "Civil and Criminal Court, Rahuri",
+  "courtNo": 14,
+  "firDetails": {},
+  "historyOfCaseHearings": [
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-11-13",
+      "hearingDate": "2024-12-21",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-12-21",
+      "hearingDate": "2025-01-22",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-01-22",
+      "hearingDate": "2025-03-07",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-03-07",
+      "hearingDate": "2025-06-17",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-06-17",
+      "hearingDate": "2025-06-23",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-06-23",
+      "hearingDate": "2025-07-29",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-07-29",
+      "hearingDate": "2025-09-11",
+      "purposeOfListing": "Awaiting Notice"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-09-11",
+      "hearingDate": "2025-10-30",
+      "purposeOfListing": "Awaiting Notice"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-10-30",
+      "hearingDate": "2025-11-20",
+      "purposeOfListing": "Awaiting Notice"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-11-20",
+      "hearingDate": "2025-12-06",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-12-06",
+      "hearingDate": "2026-01-15",
+      "purposeOfListing": "Awaiting Warrant"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-01-15",
+      "hearingDate": "2026-02-14",
+      "purposeOfListing": "Awaiting Warrant"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-02-14",
+      "hearingDate": "2026-03-16",
+      "purposeOfListing": "Awaiting Warrant"
+    }
+  ],
+  "filedDocuments": [],
+  "judgeCode": [
+    "18"
+  ],
+  "subordinateCourt": {},
+  "linkCases": [
+    {
+      "filingNumber": "MHAH180026872024",
+      "caseNumber": "201900002042024"
+    }
+  ],
+  "purpose": "Awaiting Warrant",
+  "stageOfCase": "UNKNOWN",
+  "stageOfCaseRaw": "Awaiting Warrant",
+  "lastHearingDate": "2026-02-14",
+  "interimOrders": [],
+  "processes": [],
+  "cnr": "MHAH180026872024",
+  "cnrCourtCode": "MHAH18",
+  "courtComplexCode": "MHAH18",
+  "cnrCaseNumber": "0026872024",
+  "cnrYear": "2024",
+  "caseType": "CRL_MA",
+  "caseTypeRaw": "Cri.M.A.",
+  "caseStatus": "PENDING",
+  "filingNumber": "2126/2024",
+  "filingDate": "2024-11-06",
+  "registrationNumber": "204/2024",
+  "registrationDate": "2024-11-07",
+  "firstHearingDate": "2024-11-13",
+  "nextHearingDate": "2026-03-16",
+  "caseDurationDays": 465,
+  "filingToFirstHearingDays": 7,
+  "judges": [
+    "2nd Jt. Civil Judge J.D. And JMFC"
+  ],
+  "petitioners": [
+    "Bebitai Bhausaheb Kulat"
+  ],
+  "petitionerAdvocates": [
+    "Kamble Pallavi S."
+  ],
+  "respondents": [
+    "Vitthal Bhausaheb Kulat",
+    "Anil Bhausaheb Kulat",
+    "Sunil Bhausaheb Kulat"
+  ],
+  "respondentAdvocates": [],
+  "caseCategoryFacetPath": "Administrative/Not Specified",
+  "hasOrders": false,
+  "hasJudgments": false,
+  "orderCount": 0,
+  "interimOrderCount": 0,
+  "judgmentCount": 0,
+  "hearingCount": 13,
+  "iaCount": 0,
+  "taggedMatters": [],
+  "earlierCourtDetails": [],
+  "interlocutoryApplications": [],
+  "listingDates": [],
+  "notices": [],
+  "judgmentOrders": [],
+  "caveatDetails": []
+}
+2026-03-26 20:02:53,789 - INFO - HTTP Request: DELETE https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records?cnr_number=eq.MHAH180026872024 "HTTP/2 200 OK"
+2026-03-26 20:02:53,908 - INFO - HTTP Request: POST https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records "HTTP/2 201 Created"
+2026-03-26 20:02:53,909 - INFO - 💾 Successfully saved to Supabase: MHAH180026872024
+2026-03-26 20:02:53,910 - INFO - ✅ Response sent successfully for CNR: MHAH180026872024
+2026-03-26 20:02:53,910 - INFO - ============================================================
+
+2026-03-26 20:02:53,923 - INFO - 
+============================================================
+2026-03-26 20:02:53,924 - INFO - 🚨 API REQUEST FOR CNR: MHAH180026872024
+2026-03-26 20:02:53,924 - INFO - ============================================================
+2026-03-26 20:02:58,082 - INFO - ✅ API Fetch Successful (Attempt 1)
+2026-03-26 20:02:58,083 - INFO - 
+📋 RAW API PAYLOAD FOR MHAH180026872024
+2026-03-26 20:02:58,083 - INFO - {
+  "caseNumber": "201900002042024",
+  "district": "Ahmednagar",
+  "state": "MH",
+  "stateCode": "1",
+  "districtCode": "26",
+  "complexCode": 1010306,
+  "courtCode": 14,
+  "caseTypeSub": "Bharatiya Nagarik Suraksha Sanhita - 144",
+  "courtName": "Civil and Criminal Court, Rahuri",
+  "courtNo": 14,
+  "firDetails": {},
+  "historyOfCaseHearings": [
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-11-13",
+      "hearingDate": "2024-12-21",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-12-21",
+      "hearingDate": "2025-01-22",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-01-22",
+      "hearingDate": "2025-03-07",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-03-07",
+      "hearingDate": "2025-06-17",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-06-17",
+      "hearingDate": "2025-06-23",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-06-23",
+      "hearingDate": "2025-07-29",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-07-29",
+      "hearingDate": "2025-09-11",
+      "purposeOfListing": "Awaiting Notice"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-09-11",
+      "hearingDate": "2025-10-30",
+      "purposeOfListing": "Awaiting Notice"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-10-30",
+      "hearingDate": "2025-11-20",
+      "purposeOfListing": "Awaiting Notice"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-11-20",
+      "hearingDate": "2025-12-06",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-12-06",
+      "hearingDate": "2026-01-15",
+      "purposeOfListing": "Awaiting Warrant"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-01-15",
+      "hearingDate": "2026-02-14",
+      "purposeOfListing": "Awaiting Warrant"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-02-14",
+      "hearingDate": "2026-03-16",
+      "purposeOfListing": "Awaiting Warrant"
+    }
+  ],
+  "filedDocuments": [],
+  "judgeCode": [
+    "18"
+  ],
+  "subordinateCourt": {},
+  "linkCases": [
+    {
+      "filingNumber": "MHAH180026872024",
+      "caseNumber": "201900002042024"
+    }
+  ],
+  "purpose": "Awaiting Warrant",
+  "stageOfCase": "UNKNOWN",
+  "stageOfCaseRaw": "Awaiting Warrant",
+  "lastHearingDate": "2026-02-14",
+  "interimOrders": [],
+  "processes": [],
+  "cnr": "MHAH180026872024",
+  "cnrCourtCode": "MHAH18",
+  "courtComplexCode": "MHAH18",
+  "cnrCaseNumber": "0026872024",
+  "cnrYear": "2024",
+  "caseType": "CRL_MA",
+  "caseTypeRaw": "Cri.M.A.",
+  "caseStatus": "PENDING",
+  "filingNumber": "2126/2024",
+  "filingDate": "2024-11-06",
+  "registrationNumber": "204/2024",
+  "registrationDate": "2024-11-07",
+  "firstHearingDate": "2024-11-13",
+  "nextHearingDate": "2026-03-16",
+  "caseDurationDays": 465,
+  "filingToFirstHearingDays": 7,
+  "judges": [
+    "2nd Jt. Civil Judge J.D. And JMFC"
+  ],
+  "petitioners": [
+    "Bebitai Bhausaheb Kulat"
+  ],
+  "petitionerAdvocates": [
+    "Kamble Pallavi S."
+  ],
+  "respondents": [
+    "Vitthal Bhausaheb Kulat",
+    "Anil Bhausaheb Kulat",
+    "Sunil Bhausaheb Kulat"
+  ],
+  "respondentAdvocates": [],
+  "caseCategoryFacetPath": "Administrative/Not Specified",
+  "hasOrders": false,
+  "hasJudgments": false,
+  "orderCount": 0,
+  "interimOrderCount": 0,
+  "judgmentCount": 0,
+  "hearingCount": 13,
+  "iaCount": 0,
+  "taggedMatters": [],
+  "earlierCourtDetails": [],
+  "interlocutoryApplications": [],
+  "listingDates": [],
+  "notices": [],
+  "judgmentOrders": [],
+  "caveatDetails": []
+}
+2026-03-26 20:02:58,196 - INFO - HTTP Request: DELETE https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records?cnr_number=eq.MHAH180026872024 "HTTP/2 200 OK"
+2026-03-26 20:02:58,313 - INFO - HTTP Request: POST https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records "HTTP/2 201 Created"
+2026-03-26 20:02:58,314 - INFO - 💾 Successfully saved to Supabase: MHAH180026872024
+2026-03-26 20:02:58,316 - INFO - ✅ Response sent successfully for CNR: MHAH180026872024
+2026-03-26 20:02:58,316 - INFO - ============================================================
+
+2026-03-26 20:03:56,407 - INFO - ✅ Admin login successful: admin
+2026-03-26 20:03:57,726 - INFO - HTTP Request: GET https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/admin_search_history?select=%2A&order=searched_at.desc&limit=20 "HTTP/2 200 OK"
+2026-03-26 20:04:03,526 - INFO - 
+============================================================
+2026-03-26 20:04:03,526 - INFO - 🚨 API REQUEST FOR CNR: MHAH180026872024
+2026-03-26 20:04:03,527 - INFO - ============================================================
+2026-03-26 20:04:03,622 - INFO - ✅ API Fetch Successful (Attempt 1)
+2026-03-26 20:04:03,623 - INFO - 
+📋 RAW API PAYLOAD FOR MHAH180026872024
+2026-03-26 20:04:03,623 - INFO - {
+  "caseNumber": "201900002042024",
+  "district": "Ahmednagar",
+  "state": "MH",
+  "stateCode": "1",
+  "districtCode": "26",
+  "complexCode": 1010306,
+  "courtCode": 14,
+  "caseTypeSub": "Bharatiya Nagarik Suraksha Sanhita - 144",
+  "courtName": "Civil and Criminal Court, Rahuri",
+  "courtNo": 14,
+  "firDetails": {},
+  "historyOfCaseHearings": [
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-11-13",
+      "hearingDate": "2024-12-21",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-12-21",
+      "hearingDate": "2025-01-22",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-01-22",
+      "hearingDate": "2025-03-07",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-03-07",
+      "hearingDate": "2025-06-17",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-06-17",
+      "hearingDate": "2025-06-23",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-06-23",
+      "hearingDate": "2025-07-29",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-07-29",
+      "hearingDate": "2025-09-11",
+      "purposeOfListing": "Awaiting Notice"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-09-11",
+      "hearingDate": "2025-10-30",
+      "purposeOfListing": "Awaiting Notice"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-10-30",
+      "hearingDate": "2025-11-20",
+      "purposeOfListing": "Awaiting Notice"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-11-20",
+      "hearingDate": "2025-12-06",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-12-06",
+      "hearingDate": "2026-01-15",
+      "purposeOfListing": "Awaiting Warrant"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-01-15",
+      "hearingDate": "2026-02-14",
+      "purposeOfListing": "Awaiting Warrant"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-02-14",
+      "hearingDate": "2026-03-16",
+      "purposeOfListing": "Awaiting Warrant"
+    }
+  ],
+  "filedDocuments": [],
+  "judgeCode": [
+    "18"
+  ],
+  "subordinateCourt": {},
+  "linkCases": [
+    {
+      "filingNumber": "MHAH180026872024",
+      "caseNumber": "201900002042024"
+    }
+  ],
+  "purpose": "Awaiting Warrant",
+  "stageOfCase": "UNKNOWN",
+  "stageOfCaseRaw": "Awaiting Warrant",
+  "lastHearingDate": "2026-02-14",
+  "interimOrders": [],
+  "processes": [],
+  "cnr": "MHAH180026872024",
+  "cnrCourtCode": "MHAH18",
+  "courtComplexCode": "MHAH18",
+  "cnrCaseNumber": "0026872024",
+  "cnrYear": "2024",
+  "caseType": "CRL_MA",
+  "caseTypeRaw": "Cri.M.A.",
+  "caseStatus": "PENDING",
+  "filingNumber": "2126/2024",
+  "filingDate": "2024-11-06",
+  "registrationNumber": "204/2024",
+  "registrationDate": "2024-11-07",
+  "firstHearingDate": "2024-11-13",
+  "nextHearingDate": "2026-03-16",
+  "caseDurationDays": 465,
+  "filingToFirstHearingDays": 7,
+  "judges": [
+    "2nd Jt. Civil Judge J.D. And JMFC"
+  ],
+  "petitioners": [
+    "Bebitai Bhausaheb Kulat"
+  ],
+  "petitionerAdvocates": [
+    "Kamble Pallavi S."
+  ],
+  "respondents": [
+    "Vitthal Bhausaheb Kulat",
+    "Anil Bhausaheb Kulat",
+    "Sunil Bhausaheb Kulat"
+  ],
+  "respondentAdvocates": [],
+  "caseCategoryFacetPath": "Administrative/Not Specified",
+  "hasOrders": false,
+  "hasJudgments": false,
+  "orderCount": 0,
+  "interimOrderCount": 0,
+  "judgmentCount": 0,
+  "hearingCount": 13,
+  "iaCount": 0,
+  "taggedMatters": [],
+  "earlierCourtDetails": [],
+  "interlocutoryApplications": [],
+  "listingDates": [],
+  "notices": [],
+  "judgmentOrders": [],
+  "caveatDetails": []
+}
+2026-03-26 20:04:04,157 - INFO - HTTP Request: DELETE https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records?cnr_number=eq.MHAH180026872024 "HTTP/2 200 OK"
+2026-03-26 20:04:04,289 - INFO - HTTP Request: POST https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records "HTTP/2 201 Created"
+2026-03-26 20:04:04,289 - INFO - 💾 Successfully saved to Supabase: MHAH180026872024
+2026-03-26 20:04:04,416 - INFO - HTTP Request: POST https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/admin_search_history "HTTP/2 201 Created"
+2026-03-26 20:04:04,416 - INFO - 💾 Search history saved for CNR: MHAH180026872024
+2026-03-26 20:04:04,416 - INFO - ✅ Response sent successfully for CNR: MHAH180026872024
+2026-03-26 20:04:04,416 - INFO - ============================================================
+
+2026-03-26 20:04:05,458 - INFO - 
+============================================================
+2026-03-26 20:04:05,458 - INFO - 🚨 API REQUEST FOR CNR: MHAH180026872024
+2026-03-26 20:04:05,459 - INFO - ============================================================
+2026-03-26 20:04:05,540 - INFO - ✅ API Fetch Successful (Attempt 1)
+2026-03-26 20:04:05,541 - INFO - 
+📋 RAW API PAYLOAD FOR MHAH180026872024
+2026-03-26 20:04:05,541 - INFO - {
+  "caseNumber": "201900002042024",
+  "district": "Ahmednagar",
+  "state": "MH",
+  "stateCode": "1",
+  "districtCode": "26",
+  "complexCode": 1010306,
+  "courtCode": 14,
+  "caseTypeSub": "Bharatiya Nagarik Suraksha Sanhita - 144",
+  "courtName": "Civil and Criminal Court, Rahuri",
+  "courtNo": 14,
+  "firDetails": {},
+  "historyOfCaseHearings": [
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-11-13",
+      "hearingDate": "2024-12-21",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2024-12-21",
+      "hearingDate": "2025-01-22",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-01-22",
+      "hearingDate": "2025-03-07",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "Jt Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-03-07",
+      "hearingDate": "2025-06-17",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-06-17",
+      "hearingDate": "2025-06-23",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-06-23",
+      "hearingDate": "2025-07-29",
+      "purposeOfListing": "Argument on Exh.____Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-07-29",
+      "hearingDate": "2025-09-11",
+      "purposeOfListing": "Awaiting Notice"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-09-11",
+      "hearingDate": "2025-10-30",
+      "purposeOfListing": "Awaiting Notice"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-10-30",
+      "hearingDate": "2025-11-20",
+      "purposeOfListing": "Awaiting Notice"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-11-20",
+      "hearingDate": "2025-12-06",
+      "purposeOfListing": "Steps_Unready"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2025-12-06",
+      "hearingDate": "2026-01-15",
+      "purposeOfListing": "Awaiting Warrant"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-01-15",
+      "hearingDate": "2026-02-14",
+      "purposeOfListing": "Awaiting Warrant"
+    },
+    {
+      "judge": "2nd Jt. Civil Judge J.D. And JMFC",
+      "businessOnDate": "2026-02-14",
+      "hearingDate": "2026-03-16",
+      "purposeOfListing": "Awaiting Warrant"
+    }
+  ],
+  "filedDocuments": [],
+  "judgeCode": [
+    "18"
+  ],
+  "subordinateCourt": {},
+  "linkCases": [
+    {
+      "filingNumber": "MHAH180026872024",
+      "caseNumber": "201900002042024"
+    }
+  ],
+  "purpose": "Awaiting Warrant",
+  "stageOfCase": "UNKNOWN",
+  "stageOfCaseRaw": "Awaiting Warrant",
+  "lastHearingDate": "2026-02-14",
+  "interimOrders": [],
+  "processes": [],
+  "cnr": "MHAH180026872024",
+  "cnrCourtCode": "MHAH18",
+  "courtComplexCode": "MHAH18",
+  "cnrCaseNumber": "0026872024",
+  "cnrYear": "2024",
+  "caseType": "CRL_MA",
+  "caseTypeRaw": "Cri.M.A.",
+  "caseStatus": "PENDING",
+  "filingNumber": "2126/2024",
+  "filingDate": "2024-11-06",
+  "registrationNumber": "204/2024",
+  "registrationDate": "2024-11-07",
+  "firstHearingDate": "2024-11-13",
+  "nextHearingDate": "2026-03-16",
+  "caseDurationDays": 465,
+  "filingToFirstHearingDays": 7,
+  "judges": [
+    "2nd Jt. Civil Judge J.D. And JMFC"
+  ],
+  "petitioners": [
+    "Bebitai Bhausaheb Kulat"
+  ],
+  "petitionerAdvocates": [
+    "Kamble Pallavi S."
+  ],
+  "respondents": [
+    "Vitthal Bhausaheb Kulat",
+    "Anil Bhausaheb Kulat",
+    "Sunil Bhausaheb Kulat"
+  ],
+  "respondentAdvocates": [],
+  "caseCategoryFacetPath": "Administrative/Not Specified",
+  "hasOrders": false,
+  "hasJudgments": false,
+  "orderCount": 0,
+  "interimOrderCount": 0,
+  "judgmentCount": 0,
+  "hearingCount": 13,
+  "iaCount": 0,
+  "taggedMatters": [],
+  "earlierCourtDetails": [],
+  "interlocutoryApplications": [],
+  "listingDates": [],
+  "notices": [],
+  "judgmentOrders": [],
+  "caveatDetails": []
+}
+2026-03-26 20:04:05,656 - INFO - HTTP Request: DELETE https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records?cnr_number=eq.MHAH180026872024 "HTTP/2 200 OK"
+2026-03-26 20:04:05,774 - INFO - HTTP Request: POST https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records "HTTP/2 201 Created"
+2026-03-26 20:04:05,775 - INFO - 💾 Successfully saved to Supabase: MHAH180026872024
+2026-03-26 20:04:05,775 - INFO - ✅ Response sent successfully for CNR: MHAH180026872024
+2026-03-26 20:04:05,775 - INFO - ============================================================
+
+2026-03-26 20:04:17,626 - INFO - HTTP Request: GET https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/admin_search_history?select=%2A&order=searched_at.desc&limit=20 "HTTP/2 200 OK"
+2026-03-26 20:04:26,413 - INFO - ✅ Admin logout successful
+2026-03-31 20:14:35,777 - INFO - 🚀 Starting JuriSight Backend Server...
+2026-03-31 20:14:41,863 - INFO - 
+============================================================
+2026-03-31 20:14:41,863 - INFO - 🚨 API REQUEST FOR CNR: MHAH180014742011
+2026-03-31 20:14:41,863 - INFO - ============================================================
+2026-03-31 20:14:42,002 - INFO - ✅ API Fetch Successful (Attempt 1)
+2026-03-31 20:14:42,003 - INFO - 
+📋 RAW API PAYLOAD FOR MHAH180014742011
+2026-03-31 20:14:42,003 - INFO - {
+  "caseNumber": "203415007242011",
+  "district": "Ahmednagar",
+  "state": "MH",
+  "stateCode": "1",
+  "districtCode": "26",
+  "complexCode": 1010306,
+  "courtCode": 14,
+  "caseTypeSub": "MAHARASHTRA PROHIBITION ACT - 65EF",
+  "courtName": "Civil and Criminal Court, Rahuri",
+  "courtNo": 14,
+  "firDetails": {},
+  "historyOfCaseHearings": [
+    {
+      "judge": "",
+      "businessOnDate": "2012-07-24",
+      "hearingDate": "2012-10-22",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-10-22",
+      "hearingDate": "2012-11-21",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-11-21",
+      "hearingDate": "2012-12-14",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-12-14",
+      "hearingDate": "2013-01-11",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-01-11",
+      "hearingDate": "2013-03-13",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-03-13",
+      "hearingDate": "2013-04-04",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-04-04",
+      "purposeOfListing": "Disposed"
+    }
+  ],
+  "filedDocuments": [],
+  "subordinateCourt": {},
+  "linkCases": [
+    {
+      "caseNumber": "200000000000000"
+    }
+  ],
+  "purpose": "Order on Exh",
+  "disposalType": "DISPOSED",
+  "disposalTypeRaw": "DISPOSED OF OTHERWISE",
+  "contestedStatus": "UNCONTESTED",
+  "lastHearingDate": "2013-03-13",
+  "interimOrders": [],
+  "processes": [],
+  "cnr": "MHAH180014742011",
+  "cnrCourtCode": "MHAH18",
+  "courtComplexCode": "MHAH18",
+  "cnrCaseNumber": "0014742011",
+  "cnrYear": "2011",
+  "caseType": "CC",
+  "caseTypeRaw": "S.C.C.",
+  "caseStatus": "DISPOSED",
+  "filingNumber": "1500724/2011",
+  "filingDate": "2011-05-09",
+  "registrationNumber": "1500724/2011",
+  "registrationDate": "2011-05-09",
+  "firstHearingDate": "2012-07-24",
+  "nextHearingDate": "2013-04-04",
+  "decisionDate": "2013-04-04",
+  "caseDurationDays": 696,
+  "filingToFirstHearingDays": 442,
+  "judges": [],
+  "petitioners": [
+    "state of mahrashtra"
+  ],
+  "petitionerAdvocates": [
+    "App"
+  ],
+  "respondents": [
+    "Rajendra Sukhde Dhawale"
+  ],
+  "respondentAdvocates": [
+    "Kadam SV"
+  ],
+  "caseCategoryFacetPath": "Administrative/Not Specified",
+  "hasOrders": false,
+  "hasJudgments": false,
+  "orderCount": 0,
+  "interimOrderCount": 0,
+  "judgmentCount": 0,
+  "hearingCount": 7,
+  "iaCount": 0,
+  "taggedMatters": [],
+  "earlierCourtDetails": [],
+  "interlocutoryApplications": [],
+  "listingDates": [],
+  "notices": [],
+  "judgmentOrders": [],
+  "caveatDetails": []
+}
+2026-03-31 20:14:42,710 - INFO - HTTP Request: DELETE https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records?cnr_number=eq.MHAH180014742011 "HTTP/2 200 OK"
+2026-03-31 20:14:42,895 - INFO - HTTP Request: POST https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records "HTTP/2 201 Created"
+2026-03-31 20:14:42,896 - INFO - 💾 Successfully saved to Supabase: MHAH180014742011
+2026-03-31 20:14:42,896 - INFO - ✅ Response sent successfully for CNR: MHAH180014742011
+2026-03-31 20:14:42,896 - INFO - ============================================================
+
+2026-03-31 20:14:43,941 - INFO - 
+============================================================
+2026-03-31 20:14:43,942 - INFO - 🚨 API REQUEST FOR CNR: MHAH180014742011
+2026-03-31 20:14:43,942 - INFO - ============================================================
+2026-03-31 20:14:44,011 - INFO - ✅ API Fetch Successful (Attempt 1)
+2026-03-31 20:14:44,011 - INFO - 
+📋 RAW API PAYLOAD FOR MHAH180014742011
+2026-03-31 20:14:44,011 - INFO - {
+  "caseNumber": "203415007242011",
+  "district": "Ahmednagar",
+  "state": "MH",
+  "stateCode": "1",
+  "districtCode": "26",
+  "complexCode": 1010306,
+  "courtCode": 14,
+  "caseTypeSub": "MAHARASHTRA PROHIBITION ACT - 65EF",
+  "courtName": "Civil and Criminal Court, Rahuri",
+  "courtNo": 14,
+  "firDetails": {},
+  "historyOfCaseHearings": [
+    {
+      "judge": "",
+      "businessOnDate": "2012-07-24",
+      "hearingDate": "2012-10-22",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-10-22",
+      "hearingDate": "2012-11-21",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-11-21",
+      "hearingDate": "2012-12-14",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2012-12-14",
+      "hearingDate": "2013-01-11",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-01-11",
+      "hearingDate": "2013-03-13",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-03-13",
+      "hearingDate": "2013-04-04",
+      "purposeOfListing": "Order on Exh"
+    },
+    {
+      "judge": "",
+      "businessOnDate": "2013-04-04",
+      "purposeOfListing": "Disposed"
+    }
+  ],
+  "filedDocuments": [],
+  "subordinateCourt": {},
+  "linkCases": [
+    {
+      "caseNumber": "200000000000000"
+    }
+  ],
+  "purpose": "Order on Exh",
+  "disposalType": "DISPOSED",
+  "disposalTypeRaw": "DISPOSED OF OTHERWISE",
+  "contestedStatus": "UNCONTESTED",
+  "lastHearingDate": "2013-03-13",
+  "interimOrders": [],
+  "processes": [],
+  "cnr": "MHAH180014742011",
+  "cnrCourtCode": "MHAH18",
+  "courtComplexCode": "MHAH18",
+  "cnrCaseNumber": "0014742011",
+  "cnrYear": "2011",
+  "caseType": "CC",
+  "caseTypeRaw": "S.C.C.",
+  "caseStatus": "DISPOSED",
+  "filingNumber": "1500724/2011",
+  "filingDate": "2011-05-09",
+  "registrationNumber": "1500724/2011",
+  "registrationDate": "2011-05-09",
+  "firstHearingDate": "2012-07-24",
+  "nextHearingDate": "2013-04-04",
+  "decisionDate": "2013-04-04",
+  "caseDurationDays": 696,
+  "filingToFirstHearingDays": 442,
+  "judges": [],
+  "petitioners": [
+    "state of mahrashtra"
+  ],
+  "petitionerAdvocates": [
+    "App"
+  ],
+  "respondents": [
+    "Rajendra Sukhde Dhawale"
+  ],
+  "respondentAdvocates": [
+    "Kadam SV"
+  ],
+  "caseCategoryFacetPath": "Administrative/Not Specified",
+  "hasOrders": false,
+  "hasJudgments": false,
+  "orderCount": 0,
+  "interimOrderCount": 0,
+  "judgmentCount": 0,
+  "hearingCount": 7,
+  "iaCount": 0,
+  "taggedMatters": [],
+  "earlierCourtDetails": [],
+  "interlocutoryApplications": [],
+  "listingDates": [],
+  "notices": [],
+  "judgmentOrders": [],
+  "caveatDetails": []
+}
+2026-03-31 20:14:44,130 - INFO - HTTP Request: DELETE https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records?cnr_number=eq.MHAH180014742011 "HTTP/2 200 OK"
+2026-03-31 20:14:44,250 - INFO - HTTP Request: POST https://eevolwvokcfuepbiqyiy.supabase.co/rest/v1/case_records "HTTP/2 201 Created"
+2026-03-31 20:14:44,251 - INFO - 💾 Successfully saved to Supabase: MHAH180014742011
+2026-03-31 20:14:44,251 - INFO - ✅ Response sent successfully for CNR: MHAH180014742011
+2026-03-31 20:14:44,251 - INFO - ============================================================
+
