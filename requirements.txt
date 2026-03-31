@@ -4,6 +4,4 @@ pandas
 fastapi
 supabase
 requests
-dotenv
-hashlib
-secrets
+python-dotenv
